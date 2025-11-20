@@ -105,7 +105,6 @@ skills:
    items:
      - name: Web Development
        description: ''
-       percent: 95
        icon: code-bracket
 
 languages:
