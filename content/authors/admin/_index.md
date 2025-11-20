@@ -101,8 +101,8 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
- - name: Technical Skills
-   items:
+#  - name: Technical Skills
+#    items:
      - name: Web Development (Frontend)
        description: 'HTML, CSS, Javascript, YAML, etc.'
        #percent: 95
