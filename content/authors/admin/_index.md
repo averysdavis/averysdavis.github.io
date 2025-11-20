@@ -107,7 +107,7 @@ skills:
        description: 'HTML, CSS, Javascript, YAML, etc.'
        #percent: 95
        icon: code-bracket
-     - name: GIS
+     - name: Geographic Information Systems (GIS)
        description: 'QGIS, ArcGIS'
        icon: map-pin
      - name: Bioinformatics
