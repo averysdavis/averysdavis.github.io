@@ -97,15 +97,14 @@ work:
     date_end: ''
     summary: |
       Conducted background research on Fronto-temporal dementia (FTD) | Compiled and analyzed genomics data related to FTD with data science | Organized findings into a scientific paper and presentation.
-# Skills
-# Add your own SVG icons to `assets/media/icons/`
-#skills:
-#  - name: Technical Skills
-#    items:
-#      - name: Web Development
-#        description: ''
-#        percent: 95
-#        icon: code-bracket
+Skills
+Add your own SVG icons to `assets/media/icons/`
+skills:
+ - name: Technical Skills
+   items:
+     - name: Web Development
+       description: ''
+       icon: code-bracket
 
 languages:
   - name: English
