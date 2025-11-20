@@ -155,9 +155,9 @@ awards:
     url: https://www.stanford.edu/
     date: '2024-08-24'
     awarder: Senator Dave Cortese
-    icon: hero/trophy
+    icon: book-open
     summary: |
-      Recognized for contributions to biomanufactoring.
+      Recognized for work in environmentalism.
 ---
 
 Avery Davis is a student at Khan Lab School interested in plant science, synthetic biology, and computer science. Avery currently serve as the Head of Operations for the KhanLab-BayArea iGEM team and Vice President of Khan Lab School's Speech and Debate team.
