@@ -112,6 +112,8 @@ languages:
     percent: 100
   - name: Chinese
     percent: 100
+  - name: Korean
+    percent: 20
 
 # Awards.
 #   Add/remove as many awards below as you like.
