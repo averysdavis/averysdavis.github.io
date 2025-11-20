@@ -103,12 +103,19 @@ work:
 skills:
  - name: Technical Skills
    items:
-     - name: Web Development
+     - name: Web Development (Frontend)
        description: 'HTML, CSS, Javascript, YAML, etc.'
+       #percent: 95
        icon: code-bracket
      - name: Geographic Information Systems (GIS)
        description: 'QGIS, ArcGIS'
        icon: map-pin
+     - name: Bioinformatics
+       description: 'Computational biology, FASTQC, Trim Galore!, STAR, etc.'
+       icon: beaker
+     - name: Plant Science
+       description: 'Collecting samples, taking measurements, etc.'
+       icon: globe-americas 
 
 languages:
   - name: English
