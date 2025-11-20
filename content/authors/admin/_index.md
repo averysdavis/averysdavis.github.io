@@ -101,8 +101,8 @@ work:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-#  - name: Technical Skills
-#    items:
+  - name: Technical
+    items:
      - name: Web Development (Frontend)
        description: 'HTML, CSS, Javascript, YAML, etc.'
        #percent: 95
@@ -116,6 +116,16 @@ skills:
      - name: Plant Science
        description: 'Collecting samples, taking measurements, etc.'
        icon: globe-americas 
+  - name: Professional
+    items:
+     - name: Leadership & Management
+       icon: user
+     - name: Project Coordination
+       description: 'Gantt charts, scrum, logistics, etc.'
+       icon: presentation-chart-line
+     - name: Public Speaking
+       description: 'Presentations, clear communication, etc.'
+       icon: speaker-wave
 
 languages:
   - name: English
