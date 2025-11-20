@@ -151,15 +151,22 @@ awards:
       Awarded for my team's project on biomineralizing around plastics.
   - title: iGEM Silver Medal
     url: https://teams.igem.org/5128
-    date: '2025-10-15'
+    date: '2024-10-15'
     awarder: iGEM
     icon: hero/trophy
     summary: |
       Awarded for my team's project on consuming methane.
   - title: iGEM Village Award Nomination
+    url: https://teams.igem.org/5761
+    date: '2035-10-31'
+    awarder: iGEM
+    icon: hero/trophy
+    summary: |
+      Recognized for contributions to biomanufactoring.
+  - title: Recognition for Community Service
     url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
+    date: '2024-08-24'
+    awarder: Senator Dave Cortese
     icon: hero/trophy
     summary: |
       Recognized for contributions to biomanufactoring.
