@@ -104,8 +104,11 @@ skills:
  - name: Technical Skills
    items:
      - name: Web Development
-       description: ''
+       description: 'HTML, CSS, Javascript, YAML, etc.'
        icon: code-bracket
+     - name: Geographic Information Systems (GIS)
+       description: 'QGIS, ArcGIS'
+       icon: map-pin
 
 languages:
   - name: English
