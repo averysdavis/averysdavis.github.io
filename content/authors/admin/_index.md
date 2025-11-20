@@ -53,7 +53,7 @@ work:
     company_name: KhanLab-BayArea iGEM
     company_url: 'https://igem.org/'
     icon: ''
-    date_start: 2024-18-15
+    date_start: 2024-08-15
     date_end: ''
     summary: |2-
       Organized a team of 27 students and mentors | Created a website from scratch | Taught genetics to Chinese high schoolers and middle schoolers in Chinese | Contacted environmentalists, government workers, scientists and more to receive and integrate feedback | Arranged and prepared synthetic biology educational events, reaching 190 students.
