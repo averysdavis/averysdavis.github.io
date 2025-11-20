@@ -142,27 +142,27 @@ languages:
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
+  - title: iGEM Gold Medal
+    url: https://teams.igem.org/5761
+    date: '2025-10-31'
+    awarder: iGEM
     icon: hero/trophy
     summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
+      Awarded for my team's project on biomineralizing around plastics.
+  - title: iGEM Silver Medal
+    url: https://teams.igem.org/5128
+    date: '2025-10-15'
+    awarder: iGEM
+    icon: hero/trophy
     summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
+      Awarded for my team's project on consuming methane.
+  - title: iGEM Village Award Nomination
     url: https://www.stanford.edu/
     date: '2019-06-30'
     awarder: Stanford University
-    icon: hero/academic-cap
+    icon: hero/trophy
     summary: |
-      Recognized for contributions to scaling laws in deep learning.
+      Recognized for contributions to biomanufactoring.
 ---
 
 Avery Davis is a student at Khan Lab School interested in plant science, synthetic biology, and computer science. Avery currently serve as the Head of Operations for the KhanLab-BayArea iGEM team and Vice President of Khan Lab School's Speech and Debate team.
