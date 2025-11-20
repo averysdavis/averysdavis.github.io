@@ -56,7 +56,7 @@ work:
     date_start: 2024-18-15
     date_end: ''
     summary: |2-
-      Team lead, head of web development, education, community outreach, and operations.
+      Organized a team of 27 students and mentors | Created a website from scratch | Taught genetics to Chinese high schoolers and middle schoolers in Chinese | Contacted environmentalists, government workers, scientists and more to receive and integrate feedback | Arranged and prepared synthetic biology educational events, reaching 190 students.
   - position: Research Fellow
     company_name: Stanford Deliberative Democracy Lab 
     company_url: 'https://deliberation.stanford.edu/'
@@ -64,15 +64,23 @@ work:
     date_start: 2025-10-10
     date_end: 2025-12-10
     summary: |
-      Mapped urban heat in Silicon Valley to reveal disparities.
-  - position: Member
-    company_name: Genes In Disease And Symptoms (GIDAS) 
-    company_url: 'https://www.mircore.org/gidas/'
+      Mapped heat in the San Francisco Bay Area | Created a portfolio of information of the combination of urban heat and artificial turf, which exacerbates existing problems | Reached out to environmentalists to increase awareness.
+  - position: Student
+    company_name: UCLA COSMOS (Cluster 2)
+    company_url: 'https://cosmos.ucla.edu/'
     icon: ''
-    date_start: 2023-08-15
-    date_end: ''
+    date_start: 2024-07-15
+    date_end: 2024-08-15
     summary: |
-      Researched genetic links in Frontotemporal dementia.
+      Conducted plant research, gathering samples and measurements | Found and analyzed statistical differences between desert and forest plants with data science | Mapped NASA ECOSTRESS data with Geographic Information System technology.
+  - position: Student Intern
+    company_name: NASA Genelab for High Schools 
+    company_url: 'https://www.nasa.gov/ames/genelab-for-high-schools/'
+    icon: ''
+    date_start: 2025-06-15
+    date_end: 2025-09-15
+    summary: |
+      Learned how to process omics data with computational biology methods | Recruited and organized a team of four people across three timezones for the capstone project | Investigated Arabidopsis gene variants in response to spaceflight.
   - position: Vice President
     company_name: Speech and Debate
     company_url: 'https://khanlabschool.org/'
@@ -80,8 +88,15 @@ work:
     date_start: 2023-08-15
     date_end: ''
     summary: |
-      Organized tournaments and students.
-
+      Designed and implemented public speaking curriculum | Mentored and tutored students | Organized and planned meetings and trainings | Found tournaments and organized competition signups.
+  - position: Member
+    company_name: Genes In Disease And Symptoms (GIDAS) 
+    company_url: 'https://www.mircore.org/gidas/'
+    icon: ''
+    date_start: 2023-08-15
+    date_end: ''
+    summary: |
+      Conducted background research on Fronto-temporal dementia (FTD) | Compiled and analyzed genomics data related to FTD with data science | Organized findings into a scientific paper and presentation.
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
