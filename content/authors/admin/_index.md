@@ -47,28 +47,40 @@ interests:
   - Engineering
   - Computer Science
 
-Awards:
-  - area: Gold Medal
-    institution: International Genetically Engineered Machine
-    icon: ""
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
+  - position: Head of Operations
+    company_name: KhanLab-BayArea iGEM
+    company_url: 'https://igem.org/'
     icon: ''
-    date_start: 2020-01-01
+    date_start: 2024-18-15
     date_end: ''
     summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
+      Team lead, head of web development, education, community outreach, and operations.
+  - position: Research Fellow
+    company_name: Stanford Deliberative Democracy Lab 
+    company_url: 'https://deliberation.stanford.edu/'
     icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
+    date_start: 2025-10-10
+    date_end: 2025-12-10
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Mapped urban heat in Silicon Valley to reveal disparities.
+  - position: Member
+    company_name: Genes In Disease And Symptoms (GIDAS) 
+    company_url: 'https://www.mircore.org/gidas/'
+    icon: ''
+    date_start: 2023-08-15
+    date_end: ''
+    summary: |
+      Researched genetic links in Frontotemporal dementia.
+  - position: Vice President
+    company_name: Speech and Debate
+    company_url: 'https://khanlabschool.org/'
+    icon: ''
+    date_start: 2023-08-15
+    date_end: ''
+    summary: |
+      Organized tournaments and students.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
