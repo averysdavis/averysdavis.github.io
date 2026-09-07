@@ -73,6 +73,12 @@
   outline-offset: 2px;
 }
 
+.about-section-nav-separator {
+  color: var(--color-fg-light);
+  font-family: var(--font-mono);
+  font-size: var(--text-ui);
+}
+
 .about-section {
   margin-top: var(--spacing-12);
 }
@@ -464,16 +470,6 @@
     font-size: var(--text-base);
     line-height: 1.5;
     margin-bottom: 0.35rem;
-    break-inside: avoid;
-  }
-
-  .about-section--links ul {
-    columns: 3;
-    column-gap: var(--spacing-8);
-  }
-
-  .about-section--links li {
-    margin-bottom: 0.5rem;
     break-inside: avoid;
   }
 }

@@ -16,8 +16,6 @@ describe('about data', () => {
 
   it('contains the likes section', () => {
     expect(aboutMarkdown).toContain('# I Like');
-    expect(aboutMarkdown).toContain('Running');
-    expect(aboutMarkdown).toContain('Skiing');
   });
 
   it('contains the fun facts section', () => {
@@ -25,7 +23,7 @@ describe('about data', () => {
   });
 
   it('contains the admired websites section', () => {
-    expect(aboutMarkdown).toContain('# Websites from People I Admire');
+    expect(aboutMarkdown).toContain('# Websites and People I Admire');
   });
 
   it('contains valid markdown links', () => {

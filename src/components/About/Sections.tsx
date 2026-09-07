@@ -1,7 +1,7 @@
 'use client';
 
 import Markdown from 'markdown-to-jsx';
-import { Children, type ReactNode } from 'react';
+import { Children, Fragment, type ReactNode } from 'react';
 import { createUniqueHeadingIds } from '@/lib/anchors';
 import { extractLogMarker } from '@/lib/logEntry';
 
@@ -65,12 +65,11 @@ interface ParsedAboutSection {
  * The rest stay as plain lists, because order carries no meaning there.
  */
 const sectionVariants: Record<string, string> = {
-  'Some History': 'about-section--log',
-  'Travel / Geography': 'about-section--log',
   'Fun Facts': 'about-section--compact',
   'I Like': 'about-section--compact',
-  'I Dream Of': 'about-section--compact',
-  'Websites from People I Admire': 'about-section--links',
+  'I Dislike': 'about-section--compact',
+  'Websites and People I Admire': 'about-section--compact',
+  'Underwhelming Websites': 'about-section--compact',
 };
 
 function splitAboutMarkdown(markdown: string) {
@@ -147,14 +146,20 @@ export default function AboutContent({ markdown }: AboutContentProps) {
       ) : null}
       {sections.length > 0 ? (
         <nav className="about-section-nav" aria-label="About sections">
-          {sections.map((section) => (
-            <a
-              key={section.id}
-              href={`#${section.id}`}
-              className="about-section-nav-link"
-            >
-              {section.title}
-            </a>
+          {sections.map((section, index) => (
+            <Fragment key={section.id}>
+              {index > 0 && (
+                <span
+                  className="about-section-nav-separator"
+                  aria-hidden="true"
+                >
+                  /
+                </span>
+              )}
+              <a href={`#${section.id}`} className="about-section-nav-link">
+                {section.title}
+              </a>
+            </Fragment>
           ))}
         </nav>
       ) : null}

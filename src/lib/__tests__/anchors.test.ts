@@ -33,8 +33,10 @@ describe('createHeadingId', () => {
       ]),
     ).toEqual([
       ['I Like', 'i-like'],
+      ['I Dislike', 'i-dislike'],
       ['Fun Facts', 'fun-facts'],
-      ['Websites from People I Admire', 'websites-from-people-i-admire'],
+      ['Websites and People I Admire', 'websites-and-people-i-admire'],
+      ['Underwhelming Websites', 'underwhelming-websites'],
     ]);
   });
 });

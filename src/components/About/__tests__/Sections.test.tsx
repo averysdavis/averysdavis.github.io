@@ -35,7 +35,7 @@ Hello from the intro.
     ).toBeInTheDocument();
   });
 
-  it('assigns section variants for compact and links sections', () => {
+  it('assigns the compact variant to sections with a known title', () => {
     const { container } = render(
       <AboutContent
         markdown={`# Intro
@@ -46,7 +46,7 @@ Lead paragraph.
 
 - Running
 
-# Websites from People I Admire
+# Websites and People I Admire
 
 - [Example](https://example.com)`}
       />,
@@ -56,7 +56,7 @@ Lead paragraph.
 
     expect(sections).toHaveLength(2);
     expect(sections[0]).toHaveClass('about-section--compact');
-    expect(sections[1]).toHaveClass('about-section--links');
+    expect(sections[1]).toHaveClass('about-section--compact');
   });
 
   it('adds stable heading ids for deep links', () => {
