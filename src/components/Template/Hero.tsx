@@ -15,23 +15,18 @@ export default function Hero() {
 
           <p className="hero-tagline">
             I&apos;m a {profile.role} at{' '}
-            <a href="https://openai.com" className="hero-highlight">
+            <a href="https://khanlabschool.org/" className="hero-highlight">
               {profile.employer}
             </a>
-            , working on{' '}
-            <a href="https://promptfoo.dev" className="hero-highlight">
-              Promptfoo
-            </a>{' '}
-            and{' '}
+            , leading the{' '}
             <a
-              href="https://openai.com/index/codex-security-now-in-research-preview/"
+              href="https://sites.google.com/khanlabschool.org/igem/home"
               className="hero-highlight"
             >
-              Codex Security
-            </a>
-            . I help secure AI systems and use AI to find software
-            vulnerabilities. I co-founded Promptfoo before it joined OpenAI in
-            2026.
+              iGEM
+            </a>{' '}
+            synthetic biology team and Speech and Debate. I&apos;m interested in
+            synthetic biology, computer science, engineering, plants, and more!
           </p>
 
           <div className="hero-cta">
