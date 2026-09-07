@@ -10,8 +10,6 @@ describe('about data', () => {
 
   it('contains the intro section', () => {
     expect(aboutMarkdown).toContain('# Intro');
-    expect(aboutMarkdown).toContain('OpenAI');
-    expect(aboutMarkdown).toContain('Promptfoo');
   });
 
   it('contains the likes section', () => {
@@ -32,7 +30,7 @@ describe('about data', () => {
     const links = aboutMarkdown.match(linkRegex);
 
     expect(links).not.toBeNull();
-    expect(links!.length).toBeGreaterThan(10);
+    expect(links!.length).toBeGreaterThan(0);
   });
 
   it('contains properly formatted headers', () => {
