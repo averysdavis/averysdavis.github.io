@@ -26,8 +26,8 @@ import { ogProfileSnapshot } from './og-profile.mjs';
 // required rather than imported.
 const { ImageResponse } = createRequire(import.meta.url)('next/og');
 
-// The stats page reads the same profile file, so the card cannot silently
-// drift from the public facts elsewhere on the site.
+// Other parts of the site read the same profile file, so the card cannot
+// silently drift from the public facts elsewhere on the site.
 const profile = JSON.parse(
   await readFile(join(process.cwd(), 'src/data/profile.json'), 'utf8'),
 );

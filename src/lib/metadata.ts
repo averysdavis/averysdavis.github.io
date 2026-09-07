@@ -6,7 +6,6 @@ import {
   SHARE_IMAGE_DIMENSIONS,
   SHARE_IMAGE_PATH,
   SITE_URL,
-  TWITTER_HANDLE,
 } from './utils';
 
 interface PageMetadataOptions {
@@ -19,7 +18,7 @@ interface PageMetadataOptions {
  * The share card is a fixed design that does not render the page title, so
  * the alt text describes the card rather than claiming the title appears in
  * the image. Role and employer come from the profile so they change in one
- * place, just as the stats page and OG script read shared profile facts.
+ * place, just as the OG script reads shared profile facts.
  */
 export const SHARE_IMAGE_ALT = `${AUTHOR_NAME} — ${profile.role} at ${profile.employer}`;
 
@@ -45,8 +44,6 @@ export const sharedOpenGraph: Metadata['openGraph'] = {
 
 export const sharedTwitter: Metadata['twitter'] = {
   card: 'summary_large_image',
-  site: TWITTER_HANDLE,
-  creator: TWITTER_HANDLE,
   images: [SHARE_IMAGE_PATH],
 };
 
