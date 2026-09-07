@@ -301,7 +301,7 @@
 }
 
 .daterange-sep {
-  color: var(--color-border-alt);
+  color: var(--color-fg-light);
 }
 
 .daterange-present {

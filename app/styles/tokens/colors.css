@@ -10,18 +10,18 @@
      --color-bg     = raised surface (cards, header)
      --color-bg-alt = page background
      =================== */
-  --color-bg: #fcfbf9;
-  --color-bg-alt: #f2f1ec;
-  --color-fg: #23272e;
-  --color-fg-bold: #0e1116;
-  --color-fg-light: #545a63;
+  --color-bg: #7a9f60;
+  --color-bg-alt: #f2f5ef;
+  --color-fg: #1c2414;
+  --color-fg-bold: #1c2414;
+  --color-fg-light: #2c3a22;
 
   /* ===================
      ACCENT — ultramarine
      Structure, links, active state.
      =================== */
-  --color-accent: #1b2fbf;
-  --color-accent-hover: #16249c;
+  --color-accent: #7f3d5c;
+  --color-accent-hover: #a65078;
 
   /* Filled controls need their own pair. A link accent is tuned for contrast
      against the page; reusing it as a button background put white text on it,
@@ -40,8 +40,8 @@
      --color-signal      text-safe on page bg (AA)
      --color-signal-mark graphic use only (ticks, dots, rules)
      =================== */
-  --color-signal: #9a5600;
-  --color-signal-mark: #e8930c;
+  --color-signal: #561e38;
+  --color-signal-mark: #561e38;
 
   /* ===================
      BORDER COLORS

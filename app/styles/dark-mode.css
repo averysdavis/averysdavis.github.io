@@ -8,7 +8,7 @@
    only colour permitted to carry a live value. */
 [data-theme='dark'] {
   /* Core colors */
-  --color-bg: #d9e0d8;
+  --color-bg: #7a9f60;
   --color-bg-alt: #202b1f;
   --color-fg: #ffffff;
   --color-fg-bold: #ffffff;
@@ -21,20 +21,20 @@
      This value is for text and rules on the page background; it is far too
      light to sit behind white text (2.67:1), so filled controls keep a deep
      fill and light text of their own. */
-  --color-accent: #EEAAC6;
+  --color-accent: #eeaac6;
   --color-accent-hover: #ffc8df;
 
   /* #2a3ad4 behind #f2f4f7 is 7.2:1; hover holds at 5.8:1. */
-  --color-accent-fill: #5b444c ;
-  --color-accent-fill-hover: #6C515A;
+  --color-accent-fill: #5b444c;
+  --color-accent-fill-hover: #6c515a;
   --color-on-accent: #f2f4f7;
   --color-accent-light: color-mix(in srgb, var(--color-accent) 18%, transparent);
   --color-accent-underline: color-mix(in srgb, var(--color-accent) 40%, transparent);
   --color-accent-underline-strong: color-mix(in srgb, var(--color-accent) 55%, transparent);
 
   /* Signal — amber needs no correction against ink */
-  --color-signal: #EEAAC6;
-  --color-signal-mark: #EEAAC6;
+  --color-signal: #eeaac6;
+  --color-signal-mark: #eeaac6;
 
   /* 3:1 against the dark page, matching the light-mode control border. */
   --color-control-border: #8b929c;

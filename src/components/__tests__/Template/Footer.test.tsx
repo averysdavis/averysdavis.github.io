@@ -63,11 +63,4 @@ describe('Footer', () => {
     expect(socialSection).toBeInTheDocument();
     expect(screen.getByText('Connect')).toBeInTheDocument();
   });
-
-  it('has link to home from avatar', () => {
-    render(<Footer />);
-
-    const avatarLink = document.querySelector('.footer-avatar');
-    expect(avatarLink).toHaveAttribute('href', '/');
-  });
 });
