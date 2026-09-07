@@ -4,13 +4,12 @@
     "height": 630
   },
   "profile": {
-    "name": "Michael D'Angelo",
-    "employer": "OpenAI",
-    "focus": "Promptfoo and Codex Security",
-    "countriesVisited": 53,
-    "computingSince": 1993,
-    "currentCity": "New York, NY"
+    "name": "Avery S. Davis",
+    "employer": "Khan Lab School",
+    "countriesVisited": 5,
+    "computingSince": 2017,
+    "currentCity": "San Francisco Bay Area"
   },
-  "generatorDigest": "69f9406c836e1571b913cecb43e10ae4517ea8749e55735d6e3bc700fb85f241",
-  "imageDigest": "916adc2a96bbdc30d68db9b291927d346cad40e9a12ae7384f8332cd7ed882a2"
+  "generatorDigest": "015f20c62a4acab8a2da1a98dd68f4ba01750502a642eb96e55fea39a6e1ef90",
+  "imageDigest": "ca0dc8d5acf28068e21ebc1d1c539ce62841f571921ff68d96d8ba581f29c680"
 }
