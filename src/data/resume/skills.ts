@@ -13,112 +13,88 @@ const skills: Skill[] = [
   // Languages
   {
     title: 'Python',
-    competency: 5,
-    category: ['Languages', 'ML Engineering'],
+    competency: 3,
+    category: ['Languages'],
   },
   {
-    title: 'TypeScript',
+    title: 'Java',
+    competency: 4,
+    category: ['Languages'],
+  },
+  {
+    title: 'JavaScript',
+    competency: 4,
+    category: ['Languages', 'Web Development'],
+  },
+  {
+    title: 'HTML',
     competency: 5,
     category: ['Languages', 'Web Development'],
   },
   {
-    title: 'SQL',
-    competency: 4,
-    category: ['Languages', 'Databases'],
-  },
-  // AI & LLM
-  {
-    title: 'AI Agents',
+    title: 'CSS',
     competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Prompt Engineering',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
-  },
-  {
-    title: 'PyTorch',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Pandas',
-    competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
+    category: ['Languages', 'Web Development'],
   },
   // Web Development
   {
-    title: 'Node.js',
+    title: 'jQuery',
+    competency: 4,
+    category: ['Web Development'],
+  },
+  {
+    title: 'Bootstrap',
     competency: 5,
     category: ['Web Development'],
   },
   {
-    title: 'FastAPI',
+    title: 'Jinja',
     competency: 4,
     category: ['Web Development'],
   },
+  // Data Science
   {
-    title: 'Next.js',
+    title: 'NumPy',
     competency: 3,
-    category: ['Web Development'],
-  },
-  // Databases
-  {
-    title: 'PostgreSQL',
-    competency: 4,
-    category: ['Databases'],
+    category: ['Data Science'],
   },
   {
-    title: 'Redis',
+    title: 'Pandas',
     competency: 3,
-    category: ['Databases'],
+    category: ['Data Science'],
+  },
+  {
+    title: 'Matplotlib',
+    competency: 3,
+    category: ['Data Science'],
+  },
+  // Bioinformatics
+  {
+    title: 'FastQC',
+    competency: 3,
+    category: ['Bioinformatics'],
+  },
+  {
+    title: 'Trim Galore',
+    competency: 3,
+    category: ['Bioinformatics'],
+  },
+  {
+    title: 'STAR',
+    competency: 3,
+    category: ['Bioinformatics'],
+  },
+  // Geospatial
+  {
+    title: 'QGIS',
+    competency: 5,
+    category: ['Geospatial'],
   },
   // Infrastructure
   {
-    title: 'AWS',
+    title: 'YAML',
     competency: 4,
     category: ['Infrastructure'],
-  },
-  {
-    title: 'Docker',
-    competency: 4,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Kubernetes',
-    competency: 3,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

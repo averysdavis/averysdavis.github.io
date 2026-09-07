@@ -14,6 +14,12 @@ export default function Degree({ data }: DegreeProps) {
           <time dateTime={String(data.year)}>{data.year}</time>
         </p>
       </header>
+      {data.coursework && data.coursework.length > 0 && (
+        <p className="degree-coursework">
+          <span className="degree-coursework-label">Relevant coursework:</span>{' '}
+          {data.coursework.join(', ')}
+        </p>
+      )}
     </article>
   );
 }

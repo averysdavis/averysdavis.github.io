@@ -3,20 +3,36 @@ export interface Degree {
   degree: string;
   link: string;
   year: number;
+  coursework?: string[];
 }
 
 const degrees: Degree[] = [
   {
-    school: 'Stanford University',
-    degree: 'M.S. Computational and Mathematical Engineering (ICME)',
-    link: 'https://stanford.edu',
-    year: 2016,
+    school: 'Khan Lab School',
+    degree: 'High School Diploma',
+    link: 'https://khanlabschool.org/',
+    year: 2027,
+    coursework: [
+      'Calculus BC',
+      'Biology',
+      'Physics & Engineering',
+      'Synthetic Biology',
+      'Physics C: Mechanics',
+      'Frontend Web Development',
+      'JavaScript',
+      'Statistics',
+    ],
   },
   {
-    school: 'University at Buffalo',
-    degree: 'B.S. Electrical Engineering, Computer Engineering',
-    link: 'https://buffalo.edu',
-    year: 2012,
+    school: 'Foothill College',
+    degree: 'Dual Enrollment',
+    link: 'https://foothill.edu/index.html',
+    year: 2027,
+    coursework: [
+      'Fundamentals of Chemistry',
+      'Object Oriented Programming Methodologies in Java',
+      'Ethical Hacking',
+    ],
   },
 ];
 

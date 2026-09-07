@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import Courses from '@/components/Resume/Courses';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import References from '@/components/Resume/References';
@@ -8,7 +7,6 @@ import ResumeNav from '@/components/Resume/ResumeNav';
 import Skills from '@/components/Resume/Skills';
 import PageWrapper from '@/components/Template/PageWrapper';
 import profile from '@/data/profile.json';
-import courses from '@/data/resume/courses';
 import degrees from '@/data/resume/degrees';
 import { categories, skills } from '@/data/resume/skills';
 import work from '@/data/resume/work';
@@ -43,7 +41,7 @@ export default function ResumePage() {
             <span aria-hidden="true"> · </span>
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
             <span aria-hidden="true"> · </span>
-            <a href="https://github.com/mldangelo">github.com/mldangelo</a>
+            <a href="https://github.com/averysdavis">github.com/averysdavis</a>
           </address>
         </header>
 
@@ -60,10 +58,6 @@ export default function ResumePage() {
 
           <section id="skills" className="resume-section">
             <Skills skills={skills} categories={categories} />
-          </section>
-
-          <section id="courses" className="resume-section">
-            <Courses data={courses} />
           </section>
 
           <section id="references" className="resume-section">
