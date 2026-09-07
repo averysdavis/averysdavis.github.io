@@ -4,6 +4,7 @@ import profile from '@/data/profile.json';
 import { getPostSlugs } from '@/lib/posts';
 import { AUTHOR_NAME, SHARE_IMAGE_PATH, SITE_URL } from '@/lib/utils';
 import { metadata as aboutMetadata } from '../about/page';
+import { metadata as archiveMetadata } from '../archive/page';
 import { metadata as contactMetadata } from '../contact/page';
 import { metadata as notFoundMetadata } from '../not-found';
 import { metadata as projectsMetadata } from '../projects/page';
@@ -19,7 +20,8 @@ describe('page metadata', () => {
   it.each([
     ['about', aboutMetadata, `${SITE_URL}/about/`],
     ['contact', contactMetadata, `${SITE_URL}/contact/`],
-    ['archive', projectsMetadata, `${SITE_URL}/projects/`],
+    ['projects', projectsMetadata, `${SITE_URL}/projects/`],
+    ['archive', archiveMetadata, `${SITE_URL}/archive/`],
     ['resume', resumeMetadata, `${SITE_URL}/resume/`],
     ['writing', writingMetadata, `${SITE_URL}/writing/`],
   ])('sets page-specific open graph metadata for %s', (_, metadata, url) => {
@@ -33,7 +35,8 @@ describe('page metadata', () => {
   it.each([
     ['about', aboutMetadata],
     ['contact', contactMetadata],
-    ['archive', projectsMetadata],
+    ['projects', projectsMetadata],
+    ['archive', archiveMetadata],
     ['resume', resumeMetadata],
     ['writing', writingMetadata],
   ])('sets page-specific twitter metadata for %s', (_, metadata) => {
@@ -49,7 +52,8 @@ describe('page metadata', () => {
   it.each([
     ['about', aboutMetadata],
     ['contact', contactMetadata],
-    ['archive', projectsMetadata],
+    ['projects', projectsMetadata],
+    ['archive', archiveMetadata],
     ['resume', resumeMetadata],
     ['writing', writingMetadata],
     ['404', notFoundMetadata],
@@ -69,7 +73,8 @@ describe('page metadata', () => {
   it.each([
     ['about', aboutMetadata, `${SITE_URL}/about/`],
     ['contact', contactMetadata, `${SITE_URL}/contact/`],
-    ['archive', projectsMetadata, `${SITE_URL}/projects/`],
+    ['projects', projectsMetadata, `${SITE_URL}/projects/`],
+    ['archive', archiveMetadata, `${SITE_URL}/archive/`],
     ['resume', resumeMetadata, `${SITE_URL}/resume/`],
     ['writing', writingMetadata, `${SITE_URL}/writing/`],
   ])('declares a canonical url for %s', (_, metadata, url) => {

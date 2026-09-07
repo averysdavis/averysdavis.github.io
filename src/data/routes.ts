@@ -22,6 +22,10 @@ const routes: Route[] = [
     path: '/resume',
   },
   {
+    label: 'Projects',
+    path: '/projects',
+  },
+  {
     label: 'Writing',
     path: '/writing',
   },
@@ -31,7 +35,7 @@ const routes: Route[] = [
   },
   {
     label: 'Archive',
-    path: '/projects',
+    path: '/archive',
     primary: false,
   },
 ];

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Cell from '@/components/Projects/Cell';
 import { SchemaGraph } from '@/components/Schema';
 import PageWrapper from '@/components/Template/PageWrapper';
-import data from '@/data/work';
+import data from '@/data/projects';
 import { createPageMetadata } from '@/lib/metadata';
 import {
   breadcrumbNode,
@@ -13,17 +13,17 @@ import {
 } from '@/lib/schema';
 import { AUTHOR_NAME } from '@/lib/utils';
 
-const PROJECTS_URL = `${SITE_URL}/projects/`;
+const PROJECTS_URL = `${SITE_URL}/archive/`;
 
-const PROJECTS_DESCRIPTION = `Projects and experiments from ${AUTHOR_NAME}.`;
+const PROJECTS_DESCRIPTION = `Early projects and experiments from ${AUTHOR_NAME} (2015 and earlier).`;
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Projects',
+  title: 'Archive',
   description: PROJECTS_DESCRIPTION,
-  path: '/projects/',
+  path: '/archive/',
 });
 
-export default function ProjectsPage() {
+export default function ArchivePage() {
   const featuredProjects = data.filter((p) => p.featured);
   const otherProjects = data.filter((p) => !p.featured);
 
@@ -33,19 +33,19 @@ export default function ProjectsPage() {
         nodes={[
           collectionPageNode({
             url: PROJECTS_URL,
-            name: 'Projects',
+            name: 'Archive',
             description: PROJECTS_DESCRIPTION,
             hasBreadcrumb: true,
           }),
           breadcrumbNode(PROJECTS_URL, [
             { name: 'Home', url: HOME_URL },
-            { name: 'Projects', url: PROJECTS_URL },
+            { name: 'Archive', url: PROJECTS_URL },
           ]),
         ]}
       />
       <section className="projects-page">
         <header className="projects-header">
-          <h1 className="page-title">Projects</h1>
+          <h1 className="page-title">Archive</h1>
           <p className="page-subtitle">
             Early projects and experiments from my student years
           </p>
