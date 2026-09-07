@@ -13,6 +13,13 @@ export interface Position {
 
 const work: Position[] = [
   {
+    name: 'International Genetically Engineered Machine (iGEM)',
+    position: 'Team Lead, KhanLab-BayArea Team',
+    url: 'https://sites.google.com/khanlabschool.org/igem/home',
+    startDate: '2024-08-20',
+    summary: `Co-leading a team of 25+ students and mentors across 8 schools through an international synthetic biology competition. Engineering 2 full stack documentation websites serving as primary knowledge repositories for projects, delivering 20+ biology workshops to 200+ K-12 students and senior citizens with multilingual instruction.`,
+  },
+  {
     name: 'Stanford Deliberative Democracy Lab',
     position: 'Climate Research Fellow',
     url: 'https://deliberation.stanford.edu/',
@@ -27,13 +34,6 @@ const work: Position[] = [
     startDate: '2025-06-01',
     endDate: '2025-09-15',
     summary: `Processed omics data with Python & Jupyter Notebooks to investigate plant adaptation to spaceflight conditions. Led team of 4 across 3 timezones, coordinating 10+ hours of virtual collaboration for capstone project. Analyzed Arabidopsis gene variants under spaceflight, discovering upregulation in cell wall loosening under heat stress. Presented findings on spaceflight-induced genetic adaptation to NASA GeneLab directors & 180 researchers.`,
-  },
-  {
-    name: 'International Genetically Engineered Machine (iGEM)',
-    position: 'Team Lead, KhanLab-BayArea Team',
-    url: 'https://sites.google.com/khanlabschool.org/igem/home',
-    startDate: '2024-08-20',
-    summary: `Co-leading a team of 25+ students and mentors across 8 schools through an international synthetic biology competition. Engineering 2 full stack documentation websites serving as primary knowledge repositories for projects, delivering 20+ biology workshops to 200+ K-12 students and senior citizens with multilingual instruction.`,
   },
   {
     name: 'Genes In Diseases and Symptoms (miRcore)',
