@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Cell from '@/components/Projects/Cell';
 import { SchemaGraph } from '@/components/Schema';
 import PageWrapper from '@/components/Template/PageWrapper';
-import data from '@/data/projects';
+import data from '@/data/archive';
 import { createPageMetadata } from '@/lib/metadata';
 import {
   breadcrumbNode,
