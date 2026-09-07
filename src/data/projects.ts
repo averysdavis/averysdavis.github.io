@@ -17,7 +17,7 @@ const data: Project[] = [
     image: '/images/projects/wiki26-temp.png',
     date: '2026-10-20',
     desc: 'Documentation website for the KhanLab-BayArea 2025 iGEM project.',
-    tech: ['HTML', 'CSS', 'Bootstrap', 'Jinja','Mathjax'],
+    tech: ['HTML', 'CSS', 'Bootstrap', 'Jinja', 'Mathjax'],
     featured: true,
   },
   {
@@ -47,7 +47,7 @@ const data: Project[] = [
     image: '/images/projects/genelab.png',
     date: '2025-6-20',
     desc: 'My Jupyter Notebooks from studying at NASA GeneLab. These include practices and exercises with OSDR files I trimmed and analyzed.',
-    tech: ['FastQC','STAR','Trim Galore'],
+    tech: ['FastQC', 'STAR', 'Trim Galore'],
     featured: true,
   },
   {
@@ -67,17 +67,15 @@ const data: Project[] = [
     image: '/images/projects/pres_vid_25.png',
     date: '2025-8-20',
     desc: 'Presentation video for the KhanLab-BayArea 2025 iGEM project.',
-    tech: [],
     featured: true,
   },
   {
     title: 'Promotion Video 2025',
     subtitle: 'International Genetically Engineered Machine (iGEM)',
-    link: 'https://video.igem.org/w/1qUXaL9ND5KZCcmvqKZeNL',
+    link: 'https://video.igem.org/w/szW91Q4uFWGSScLLBdqo2Q',
     image: '/images/projects/pro_vid_25.png',
     date: '2025-8-20',
     desc: 'Promotion video for the KhanLab-BayArea 2025 iGEM project.',
-    tech: [],
     featured: true,
   },
 ];
