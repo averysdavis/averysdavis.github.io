@@ -5,7 +5,6 @@ import projects from '../projects';
 describe('projects data', () => {
   it('exports an array of projects', () => {
     expect(Array.isArray(projects)).toBe(true);
-    expect(projects.length).toBeGreaterThan(0);
   });
 
   it('each project has required properties', () => {
@@ -79,10 +78,5 @@ describe('projects data', () => {
         expect(typeof project.featured).toBe('boolean');
       }
     }
-  });
-
-  it('has at least one featured project', () => {
-    const featured = projects.filter((p) => p.featured);
-    expect(featured.length).toBeGreaterThanOrEqual(1);
   });
 });

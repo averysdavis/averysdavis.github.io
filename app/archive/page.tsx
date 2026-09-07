@@ -46,10 +46,13 @@ export default function ArchivePage() {
       <section className="projects-page">
         <header className="projects-header">
           <h1 className="page-title">Archive</h1>
-          <p className="page-subtitle">
-            Early projects and experiments from my student years
-          </p>
         </header>
+
+        {data.length === 0 && (
+          <p className="page-subtitle">
+            I&apos;m too young to have archived anything yet!
+          </p>
+        )}
 
         {featuredProjects.length > 0 && (
           <section className="projects-featured">
