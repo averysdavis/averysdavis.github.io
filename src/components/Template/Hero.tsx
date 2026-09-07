@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta">
-            <Link href="/about" className="button">
+            <Link href="/writing/about" className="button">
               About Me
             </Link>
             <Link href="/resume" className="hero-resume-link">

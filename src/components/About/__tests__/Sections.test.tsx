@@ -2,9 +2,11 @@ import { render, screen, waitFor, within } from '@testing-library/react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
-import { aboutMarkdown } from '@/data/about';
 import { createHeadingId } from '@/lib/anchors';
+import { getPostBySlug } from '@/lib/posts';
 import AboutContent from '../Sections';
+
+const aboutMarkdown = getPostBySlug('about')?.content ?? '';
 
 function getActualSectionTitles(markdown: string) {
   return Array.from(markdown.matchAll(/^# (.+)$/gm))

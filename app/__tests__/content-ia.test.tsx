@@ -51,7 +51,14 @@ describe('writing information architecture', () => {
     const featured = container.querySelectorAll('.writing-item--featured');
 
     expect(featured).toHaveLength(1);
-    expect(featured[0]).toHaveAttribute('href', newest?.url);
+    expect(featured[0]).toHaveTextContent(newest!.title);
+    // Next's Link drops the trailing slash from the rendered href in this
+    // test environment (no live router/build manifest), while the data
+    // layer keeps the canonical trailing-slash form — normalize before
+    // comparing so this isn't testing that quirk instead of item identity.
+    expect(featured[0]?.getAttribute('href')?.replace(/\/$/, '')).toBe(
+      newest?.url.replace(/\/$/, ''),
+    );
   });
 
   it('shows provenance beside every external-link arrow', () => {

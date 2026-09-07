@@ -34,7 +34,7 @@ describe('Hero', () => {
     render(<Hero />);
 
     const aboutButton = screen.getByRole('link', { name: /about me/i });
-    expect(aboutButton).toHaveAttribute('href', '/about');
+    expect(aboutButton).toHaveAttribute('href', '/writing/about');
     expect(aboutButton).toHaveClass('button');
 
     const resumeButton = screen.getByRole('link', { name: /view resume/i });

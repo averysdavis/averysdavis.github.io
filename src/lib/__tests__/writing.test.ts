@@ -37,6 +37,7 @@ describe('getWritingItems', () => {
       title: string,
       date: string,
       url = `https://example.com/${title.toLowerCase()}`,
+      pinned = false,
     ): WritingItem => ({
       title,
       date,
@@ -44,6 +45,7 @@ describe('getWritingItems', () => {
       description: '',
       isExternal: true,
       source: 'Example',
+      pinned,
     });
 
     expect(
@@ -54,5 +56,26 @@ describe('getWritingItems', () => {
         compareWritingItems,
       ),
     ).toEqual([item('Alpha', '2026-01-01'), item('Zulu', '2026-01-01')]);
+  });
+
+  it('sorts a pinned item first regardless of date', () => {
+    const item = (
+      title: string,
+      date: string,
+      pinned: boolean,
+    ): WritingItem => ({
+      title,
+      date,
+      url: `https://example.com/${title.toLowerCase()}`,
+      description: '',
+      isExternal: true,
+      source: 'Example',
+      pinned,
+    });
+
+    const pinned = item('Older but pinned', '2020-01-01', true);
+    const newer = item('Newer', '2026-01-01', false);
+
+    expect([newer, pinned].sort(compareWritingItems)).toEqual([pinned, newer]);
   });
 });

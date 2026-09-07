@@ -8,10 +8,18 @@ export interface WritingItem {
   description: string;
   isExternal: boolean;
   source: string;
+  pinned: boolean;
 }
 
-/** Stable newest-first order; undated guides sort by title at the end. */
+/**
+ * Pinned items lead regardless of date, then newest-first order;
+ * undated guides sort by title at the end.
+ */
 export function compareWritingItems(a: WritingItem, b: WritingItem): number {
+  if (a.pinned !== b.pinned) {
+    return a.pinned ? -1 : 1;
+  }
+
   if (!a.date && !b.date) {
     return a.title.localeCompare(b.title) || a.url.localeCompare(b.url);
   }
@@ -43,11 +51,13 @@ export function getWritingItems(): WritingItem[] {
     description: post.description,
     isExternal: false,
     source: 'On this site',
+    pinned: Boolean(post.pinned),
   }));
   const external: WritingItem[] = externalWriting.map((item) => ({
     ...item,
     isExternal: true,
     source: externalSource(item.url),
+    pinned: false,
   }));
 
   return [...internal, ...external].sort(compareWritingItems);

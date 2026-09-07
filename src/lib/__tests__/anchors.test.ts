@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
-import { aboutMarkdown } from '@/data/about';
+import { getPostBySlug } from '@/lib/posts';
 import { createHeadingId, createUniqueHeadingIds } from '../anchors';
+
+const aboutMarkdown = getPostBySlug('about')?.content ?? '';
 
 function getAboutSectionTitles(markdown: string): string[] {
   return Array.from(

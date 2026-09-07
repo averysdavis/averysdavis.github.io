@@ -28,7 +28,7 @@ describe('feed.xml route', () => {
     const xml = await response.text();
 
     expect(xml).toContain(
-      '<lastBuildDate>Tue, 10 Mar 2026 12:00:00 GMT</lastBuildDate>',
+      '<lastBuildDate>Mon, 07 Sep 2026 12:00:00 GMT</lastBuildDate>',
     );
   });
 });

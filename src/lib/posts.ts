@@ -12,6 +12,8 @@ export interface PostFrontmatter {
   image?: string;
   /** Required whenever `image` is set. */
   imageAlt?: string;
+  /** Keeps a post pinned first in the writing index, ahead of date order. */
+  pinned?: boolean;
 }
 
 export interface Post {
@@ -23,6 +25,7 @@ export interface Post {
   draft?: boolean;
   image?: string;
   imageAlt?: string;
+  pinned?: boolean;
 }
 
 const postsDirectory = path.join(process.cwd(), 'content/writing');
@@ -78,6 +81,7 @@ function readPost(slug: string): Post | null {
     draft: frontmatter.draft,
     image: frontmatter.image,
     imageAlt: frontmatter.imageAlt,
+    pinned: frontmatter.pinned,
   };
 }
 
@@ -116,6 +120,10 @@ export function validatePostFrontmatter(
     throw frontmatterError(source, '"draft" must be a boolean when provided');
   }
 
+  if (value.pinned !== undefined && typeof value.pinned !== 'boolean') {
+    throw frontmatterError(source, '"pinned" must be a boolean when provided');
+  }
+
   const image =
     value.image === undefined
       ? undefined
@@ -151,6 +159,7 @@ export function validatePostFrontmatter(
     ...(value.draft === undefined ? {} : { draft: value.draft }),
     ...(image === undefined ? {} : { image }),
     ...(imageAlt === undefined ? {} : { imageAlt }),
+    ...(value.pinned === undefined ? {} : { pinned: value.pinned }),
   };
 }
 

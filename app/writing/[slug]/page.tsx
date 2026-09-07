@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import AboutContent from '@/components/About/Sections';
 import { SchemaGraph } from '@/components/Schema';
 import PageWrapper from '@/components/Template/PageWrapper';
 import PostContent from '@/components/Writing/PostContent';
@@ -22,6 +23,13 @@ import { AUTHOR_NAME, formatDate, SITE_URL } from '@/lib/utils';
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
+
+/**
+ * The About page was folded into Writing as a pinned post, but it keeps its
+ * own multi-section layout (compact grids, section nav) rather than the
+ * plain prose renderer every other post uses.
+ */
+const ABOUT_SLUG = 'about';
 
 interface PostImage extends ImageSize {
   alt: string;
@@ -113,6 +121,7 @@ export default async function PostPage({ params }: PageProps) {
   const writingUrl = `${SITE_URL}/writing/`;
   const imageSizes = readPostImageSizes(post.content);
   const postImage = getPostImage(post);
+  const isAboutPost = post.slug === ABOUT_SLUG;
 
   return (
     <PageWrapper>
@@ -132,18 +141,28 @@ export default async function PostPage({ params }: PageProps) {
           ]),
         ]}
       />
-      <article className="post-page">
+      <article className={isAboutPost ? 'about-page' : 'post-page'}>
         <ReadingProgress />
-        <header className="post-header">
-          <time className="post-date" dateTime={post.date}>
-            {formatDate(post.date)}
-          </time>
-          <h1 className="post-title">{post.title}</h1>
-          <p className="post-description">{post.description}</p>
-        </header>
-        <div className="post-content prose">
-          <PostContent content={post.content} imageSizes={imageSizes} />
-        </div>
+        {isAboutPost ? (
+          <header className="about-header">
+            <h1 className="page-title">{post.title}</h1>
+          </header>
+        ) : (
+          <header className="post-header">
+            <time className="post-date" dateTime={post.date}>
+              {formatDate(post.date)}
+            </time>
+            <h1 className="post-title">{post.title}</h1>
+            <p className="post-description">{post.description}</p>
+          </header>
+        )}
+        {isAboutPost ? (
+          <AboutContent markdown={post.content} />
+        ) : (
+          <div className="post-content prose">
+            <PostContent content={post.content} imageSizes={imageSizes} />
+          </div>
+        )}
       </article>
     </PageWrapper>
   );

@@ -35,10 +35,6 @@ describe('Footer', () => {
   it('renders navigation links', () => {
     render(<Footer />);
 
-    expect(screen.getByRole('link', { name: /about/i })).toHaveAttribute(
-      'href',
-      '/about',
-    );
     expect(screen.getByRole('link', { name: /resume/i })).toHaveAttribute(
       'href',
       '/resume',
@@ -50,6 +46,10 @@ describe('Footer', () => {
     expect(screen.getByRole('link', { name: /projects/i })).toHaveAttribute(
       'href',
       '/projects',
+    );
+    expect(screen.getByRole('link', { name: /research/i })).toHaveAttribute(
+      'href',
+      '/research',
     );
     expect(screen.getByRole('link', { name: /contact/i })).toHaveAttribute(
       'href',

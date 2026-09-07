@@ -22,11 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${SITE_URL}/about/`,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${SITE_URL}/resume/`,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -38,6 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/archive/`,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/research/`,
       changeFrequency: 'monthly',
       priority: 0.8,
     },

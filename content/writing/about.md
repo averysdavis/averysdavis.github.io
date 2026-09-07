@@ -1,4 +1,11 @@
-export const aboutMarkdown = `# Intro
+---
+title: 'About'
+date: '2026-09-07'
+description: 'A few things about me — what I like, what I dislike, and some fun facts.'
+pinned: true
+---
+
+# Intro
 
 I'm a senior at Khan Lab School. I like building websites. Today, I'm a lead of the KhanLab-BayArea iGEM team, an international synthetic biology competition,
 and my school's Speech and Debate team.
@@ -48,4 +55,3 @@ If you're my friend and you feel like you belong on this list, you're probably r
 
 - [Liam Davis, aka my brother ;)](https://liamjdavis.github.io/)
 - [Khan Academy](https://www.khanacademy.org/)
-`;
