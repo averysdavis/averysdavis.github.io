@@ -9,7 +9,8 @@ interface CellProps {
 }
 
 export default function Cell({ data }: CellProps) {
-  const { title, subtitle, link, image, date, desc, tech, featured } = data;
+  const { title, subtitle, link, image, imageAlt, date, desc, tech, featured } =
+    data;
 
   const hasLink = Boolean(link);
 
@@ -18,7 +19,7 @@ export default function Cell({ data }: CellProps) {
       <div className="project-card-image">
         <Image
           src={image}
-          alt=""
+          alt={imageAlt}
           width={PROJECT_IMAGE.width}
           height={PROJECT_IMAGE.height}
           sizes="(max-width: 600px) 100vw, 50vw"

@@ -3,6 +3,7 @@ export interface Project {
   subtitle?: string;
   link?: string;
   image: string;
+  imageAlt: string;
   date: string;
   desc: string;
   tech?: string[];

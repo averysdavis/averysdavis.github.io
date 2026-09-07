@@ -8,6 +8,7 @@ describe('Cell', () => {
     title: 'Test Project',
     subtitle: 'A test subtitle',
     image: '/images/test.jpg',
+    imageAlt: 'A screenshot of the test project interface.',
     date: '2023-01-01',
     desc: 'This is a test project description',
     link: 'https://example.com',
@@ -33,11 +34,11 @@ describe('Cell', () => {
     expect(screen.getByText('2023')).toBeInTheDocument();
   });
 
-  it('treats the thumbnail as decorative beside its matching heading', () => {
+  it('gives the thumbnail its real alt text', () => {
     render(<Cell data={mockProject} />);
     const image = document.querySelector('.project-card-image img');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('alt', '');
+    expect(image).toHaveAttribute('alt', mockProject.imageAlt);
     expect(image).toHaveAttribute('src', expect.stringContaining('test.jpg'));
   });
 
