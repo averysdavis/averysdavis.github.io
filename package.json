@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mldangelo/personal-site.git"
+    "url": "https://github.com/averysdavis/averysdavis.github.io"
   },
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26.0.0"

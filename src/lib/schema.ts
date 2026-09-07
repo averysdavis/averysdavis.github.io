@@ -112,7 +112,7 @@ export function websiteNode(): SchemaNode {
     '@id': WEBSITE_ID,
     url: HOME_URL,
     name: AUTHOR_NAME,
-    alternateName: ['mldangelo.com', 'mldangelo'],
+    alternateName: ['averysdavis.github.io', 'averysdavis'],
     description: SITE_DESCRIPTION,
     inLanguage: SITE_LANGUAGE,
     publisher: personRef(),
