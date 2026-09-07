@@ -15,7 +15,7 @@ import { AUTHOR_NAME, SITE_URL } from '@/lib/utils';
 
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
-  description: `${AUTHOR_NAME}'s Resume. iGEM, Nasa GeneLab, Stanford Deliberative Democracy Lab, Khan Lab School.`,
+  description: `${AUTHOR_NAME}'s Resume. iGEM, NASA GeneLab, Stanford Deliberative Democracy Lab, Khan Lab School.`,
   path: '/resume/',
 });
 
