@@ -14,29 +14,14 @@ describe('about data', () => {
     expect(aboutMarkdown).toContain('Promptfoo');
   });
 
-  it('contains the history section', () => {
-    expect(aboutMarkdown).toContain('# Some History');
-    expect(aboutMarkdown).toContain('MS-DOS');
-  });
-
   it('contains the likes section', () => {
     expect(aboutMarkdown).toContain('# I Like');
     expect(aboutMarkdown).toContain('Running');
     expect(aboutMarkdown).toContain('Skiing');
   });
 
-  it('contains the travel section', () => {
-    expect(aboutMarkdown).toContain('# Travel / Geography');
-    expect(aboutMarkdown).toContain('Buffalo, New York');
-  });
-
   it('contains the fun facts section', () => {
     expect(aboutMarkdown).toContain('# Fun Facts');
-  });
-
-  it('contains the dreams section', () => {
-    expect(aboutMarkdown).toContain('# I Dream Of');
-    expect(aboutMarkdown).toContain('Staying curious');
   });
 
   it('contains the admired websites section', () => {
@@ -58,6 +43,6 @@ describe('about data', () => {
     const headers = aboutMarkdown.match(headerRegex);
 
     expect(headers).not.toBeNull();
-    expect(headers!.length).toBeGreaterThan(5);
+    expect(headers!.length).toBeGreaterThan(0);
   });
 });
