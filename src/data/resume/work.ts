@@ -20,6 +20,13 @@ const work: Position[] = [
     summary: `Co-leading a team of 25+ students and mentors across 8 schools through an international synthetic biology competition. Engineering 2 full stack documentation websites serving as primary knowledge repositories for projects, delivering 20+ biology workshops to 200+ K-12 students and senior citizens with multilingual instruction.`,
   },
   {
+    name: 'Speech and Debate, Khan Lab School',
+    position: 'President',
+    url: 'https://khanlabschool.org/',
+    startDate: '2024-08-20',
+    summary: `Organizing weekly practice for 20+ students, teaching public speaking skills, organizing tournament sign ups and finances.`,
+  },
+  {
     name: 'Stanford Deliberative Democracy Lab',
     position: 'Climate Research Fellow',
     url: 'https://deliberation.stanford.edu/',
