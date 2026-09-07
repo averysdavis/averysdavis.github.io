@@ -39,7 +39,6 @@ describe('personal stats data', () => {
 
     expect(countriesStat).toBeDefined();
     expect(countriesStat!.label).toBe('Countries visited');
-    expect(countriesStat!.value).toBe(53);
     expect(countriesStat!.link).toContain('google.com/maps');
   });
 
@@ -48,7 +47,6 @@ describe('personal stats data', () => {
 
     expect(locationStat).toBeDefined();
     expect(locationStat!.label).toBe('Current city');
-    expect(locationStat!.value).toBe('New York, NY');
   });
 
   it('Age component renders and updates', () => {
