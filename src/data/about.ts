@@ -10,7 +10,7 @@ and my school's Speech and Debate team.
 - Plants
 - Psychopharmacology
 - Fresh bed sheets
-- Todo lists
+- Filipino Christmas songs
 - Buff cats
 - Cumin lamb skewers
 - Evapotranspiration
@@ -24,6 +24,7 @@ and my school's Speech and Debate team.
 - Procrastination
 - Orange pulp
 - Library cards expiring
+- iGEM wikis on mobile
 
 # Fun Facts
 
