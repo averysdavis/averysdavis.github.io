@@ -34,7 +34,6 @@ export default function HomePage() {
       <section className="home-writing" aria-labelledby="home-writing-title">
         <div className="home-writing-header">
           <div>
-            <span className="home-section-kicker">Recent signal</span>
             <h2 id="home-writing-title">Latest writing</h2>
           </div>
           <Link href="/writing/" className="home-writing-all">

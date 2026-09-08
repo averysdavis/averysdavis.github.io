@@ -1,14 +1,13 @@
 ---
-title: 'About'
+title: 'About Me'
 date: '2026-09-07'
-description: 'A few things about me — what I like, what I dislike, and some fun facts.'
+description: 'Just a few things about me.'
 pinned: true
 ---
 
 # Intro
 
-I'm a senior at Khan Lab School. I like building websites. Today, I'm a lead of the KhanLab-BayArea iGEM team, an international synthetic biology competition,
-and my school's Speech and Debate team.
+I like to think I'm a chill person.
 
 # I Like
 

@@ -6,7 +6,7 @@ import HomePage from '../page';
 import WritingPage from '../writing/page';
 
 describe('writing information architecture', () => {
-  it('surfaces the three newest dated items on the homepage', () => {
+  it('surfaces up to the three newest dated items on the homepage', () => {
     const expected = getWritingItems()
       .filter((item) => item.date)
       .slice(0, 3);
@@ -15,7 +15,7 @@ describe('writing information architecture', () => {
     const section = screen.getByRole('region', { name: 'Latest writing' });
     const cards = container.querySelectorAll('.home-writing-item');
 
-    expect(cards).toHaveLength(3);
+    expect(cards).toHaveLength(expected.length);
     expect(
       [...cards].map((card) => card.querySelector('h3')?.textContent),
     ).toEqual(expected.map((item) => item.title));
@@ -24,21 +24,23 @@ describe('writing information architecture', () => {
     ).toHaveAttribute('href', '/writing');
   });
 
-  it('groups owned essays, external articles, and guides under real headings', () => {
+  it('groups owned essays under a real heading, and hides empty groups', () => {
     const { container } = render(<WritingPage />);
 
     expect(
       screen.getByRole('heading', { level: 2, name: 'Essays on this site' }),
     ).toBeInTheDocument();
+    // No external writing or undated guides exist right now, so those
+    // sections should not render an empty heading over nothing.
     expect(
-      screen.getByRole('heading', {
+      screen.queryByRole('heading', {
         level: 2,
         name: 'Selected writing elsewhere',
       }),
-    ).toBeInTheDocument();
+    ).not.toBeInTheDocument();
     expect(
-      screen.getByRole('heading', { level: 2, name: 'Guides' }),
-    ).toBeInTheDocument();
+      screen.queryByRole('heading', { level: 2, name: 'Guides' }),
+    ).not.toBeInTheDocument();
 
     expect(container.querySelectorAll('.writing-item h3')).toHaveLength(
       getWritingItems().length,

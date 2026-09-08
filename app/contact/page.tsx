@@ -29,7 +29,7 @@ export default function ContactPage() {
           </div>
 
           <div className="contact-divider">
-            <span>or find me on</span>
+            <span>or find me elsewhere</span>
           </div>
 
           <ContactIcons includeEmail={false} />
