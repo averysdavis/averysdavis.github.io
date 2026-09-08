@@ -35,16 +35,11 @@ export const metadata: Metadata = {
 };
 
 interface WritingItemProps {
-  featured?: boolean;
   item: Item;
   showDate?: boolean;
 }
 
-function WritingItem({
-  featured = false,
-  item,
-  showDate = true,
-}: WritingItemProps) {
+function WritingItem({ item, showDate = true }: WritingItemProps) {
   const content = (
     <>
       <div className="writing-meta">
@@ -71,17 +66,13 @@ function WritingItem({
     </>
   );
 
-  const className = ['writing-item', featured ? 'writing-item--featured' : '']
-    .filter(Boolean)
-    .join(' ');
-
   if (item.isExternal) {
     return (
       <a
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className={className}
+        className="writing-item"
       >
         {content}
       </a>
@@ -89,7 +80,7 @@ function WritingItem({
   }
 
   return (
-    <Link href={item.url} className={className}>
+    <Link href={item.url} className="writing-item">
       {content}
     </Link>
   );
@@ -142,11 +133,7 @@ export default function WritingPage() {
           </h2>
           <div className="writing-list">
             {internal.map((item) => (
-              <WritingItem
-                key={item.url}
-                item={item}
-                featured={item.url === latestDatedItem?.url}
-              />
+              <WritingItem key={item.url} item={item} />
             ))}
           </div>
         </section>
@@ -161,11 +148,7 @@ export default function WritingPage() {
             </h2>
             <div className="writing-list">
               {external.map((item) => (
-                <WritingItem
-                  key={item.url}
-                  item={item}
-                  featured={item.url === latestDatedItem?.url}
-                />
+                <WritingItem key={item.url} item={item} />
               ))}
             </div>
           </section>

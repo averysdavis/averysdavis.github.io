@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const recentWriting = getWritingItems()
     .filter((item) => item.date)
-    .slice(0, 3);
+    .slice(0, 6);
 
   return (
     <PageWrapper mainClassName="page-main--hero">

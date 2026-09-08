@@ -6,10 +6,10 @@ import HomePage from '../page';
 import WritingPage from '../writing/page';
 
 describe('writing information architecture', () => {
-  it('surfaces up to the three newest dated items on the homepage', () => {
+  it('surfaces up to the six newest dated items on the homepage', () => {
     const expected = getWritingItems()
       .filter((item) => item.date)
-      .slice(0, 3);
+      .slice(0, 6);
 
     const { container } = render(<HomePage />);
     const section = screen.getByRole('region', { name: 'Selected writings' });
@@ -44,22 +44,6 @@ describe('writing information architecture', () => {
 
     expect(container.querySelectorAll('.writing-item h3')).toHaveLength(
       getWritingItems().length,
-    );
-  });
-
-  it('features exactly the newest dated item, wherever it is grouped', () => {
-    const newest = getWritingItems().find((item) => item.date);
-    const { container } = render(<WritingPage />);
-    const featured = container.querySelectorAll('.writing-item--featured');
-
-    expect(featured).toHaveLength(1);
-    expect(featured[0]).toHaveTextContent(newest!.title);
-    // Next's Link drops the trailing slash from the rendered href in this
-    // test environment (no live router/build manifest), while the data
-    // layer keeps the canonical trailing-slash form — normalize before
-    // comparing so this isn't testing that quirk instead of item identity.
-    expect(featured[0]?.getAttribute('href')?.replace(/\/$/, '')).toBe(
-      newest?.url.replace(/\/$/, ''),
     );
   });
 

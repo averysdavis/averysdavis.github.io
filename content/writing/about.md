@@ -7,7 +7,7 @@ pinned: true
 
 # Intro
 
-I like to think I'm a chill person.
+I like to think I can be a chill person.
 
 # I Like
 

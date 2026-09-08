@@ -265,11 +265,11 @@
   transition: background-color var(--duration-instant) var(--ease-out);
 }
 
-.home-writing-item:first-child {
+.home-writing-item:nth-child(3n + 1) {
   padding-left: 0;
 }
 
-.home-writing-item:last-child {
+.home-writing-item:nth-child(3n) {
   padding-right: 0;
   border-right: 0;
 }

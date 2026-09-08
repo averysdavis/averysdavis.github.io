@@ -1,7 +1,7 @@
 ---
 title: "Gabriel's Horn"
 date: '2026-05-27'
-description: "Gabriel's Horn is a shape formed by rotating y = 1/x around the x-axis that somehow has a finite volume but an infinite surface area. It works through the improper integrals behind that result and the Painter's Paradox it creates."
+description: "Gabriel's Horn is a shape formed by rotating y = 1/x around the x-axis and somehow has a finite volume but an infinite surface area. It works through the improper integrals and gives some insight about the Painter's Paradox it creates."
 pinned: true
 ---
 
