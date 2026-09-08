@@ -13,6 +13,17 @@ export interface Project {
 
 const data: Project[] = [
   {
+    title: 'Psychoactive Plants',
+    inProgress: true,
+    subtitle: 'Khan Lab School (Senior Capstone)',
+    image: '/images/projects/morning_glory.jpg',
+    imageAlt:
+      'Two morning glory flowers in a patio container garden.',
+    date: '2026-10-20',
+    desc: 'History and presence psychoactive substances from plants in the SF Bay Area.',
+    featured: true,
+  },
+  {
     title: 'Wiki 2026',
     inProgress: true,
     subtitle: 'International Genetically Engineered Machine (iGEM)',
