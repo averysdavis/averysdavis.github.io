@@ -418,3 +418,10 @@
   border-radius: var(--radius-sm);
   margin: 1.5rem 0;
 }
+
+/* KaTeX ships pre-rendered at build time; only the layout needs scoping. */
+.prose .katex-display {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

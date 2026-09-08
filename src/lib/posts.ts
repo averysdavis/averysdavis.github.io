@@ -3,6 +3,8 @@ import path from 'node:path';
 
 import matter from 'gray-matter';
 
+import { renderMath } from '@/lib/math';
+
 export interface PostFrontmatter {
   title: string;
   date: string;
@@ -77,7 +79,7 @@ function readPost(slug: string): Post | null {
     title: frontmatter.title,
     date: frontmatter.date,
     description: frontmatter.description,
-    content,
+    content: renderMath(content),
     draft: frontmatter.draft,
     image: frontmatter.image,
     imageAlt: frontmatter.imageAlt,

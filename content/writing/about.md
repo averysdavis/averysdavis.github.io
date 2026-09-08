@@ -1,7 +1,7 @@
 ---
 title: 'About Me'
 date: '2026-09-07'
-description: 'Just a few things about me.'
+description: "Who I am outside of resumes and papers. What I like, what I don't like, and some random facts."
 pinned: true
 ---
 

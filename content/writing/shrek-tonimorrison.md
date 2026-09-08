@@ -1,7 +1,7 @@
 ---
 title: 'Shrek, Toni Morrison, Subversion, and the Postmodernist Truth'
 date: '2025-11-22'
-description: 'An essay from junior year in my American Literature class.'
+description: "An American Literature essay comparing Toni Morrison's novel A Mercy to the Shrek film franchise, both of which set out to subvert a traditional story. Morrison's treatment of motherhood and power holds up to scrutiny while Shrek mostly falls back on the tropes it tries to reject."
 pinned: true
 ---
 

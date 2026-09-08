@@ -1,3 +1,5 @@
+import 'katex/dist/katex.min.css';
+
 import { newsreaderItalic } from '../fonts';
 
 export default function WritingLayout({
