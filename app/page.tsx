@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const recentWriting = [...getWritingItems(), ...getPresentationItems()]
-    .filter((item) => item.date)
+    .filter((item) => item.pinned && item.date)
     .sort(compareWritingItems)
     .slice(0, 6);
 

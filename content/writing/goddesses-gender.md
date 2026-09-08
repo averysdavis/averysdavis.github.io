@@ -2,7 +2,6 @@
 title: 'Greek Goddesses and Gender'
 date: '2024-12-15'
 description: "An analysis of how Homer's Iliad treats goddesses and mortal women completely differently. Divinity, not gender, is what grants Aphrodite, Athena, and Hera the independence, agency, and power that mortal women like Briseis and Andromache are denied."
-pinned: true
 ---
 
 _The Iliad_ by Homer is an ancient Greek epic poem which details part of the final year of the Trojan War, a decades long conflict between Greeks and Trojans. The poem focuses on the rage of the greatest Greek warrior, Achilles, and its effects. While the epic mainly focuses on male characters, it provides insight into the roles of mortal women and goddesses in ancient Greek society. In the _Iliad_, mortal women are treated as objects to be fought over, rarely having their voices be heard. However, the goddesses have great influence on plot, with dialogue and important roles. This distinction between their roles indicates that mortal women and goddesses are not alike. Goddesses, due to their divinity, possess independence, agency, and power, allowing them to transcend mortal gender boundaries. This distinction reveals the constraints forced upon mortal women, while simultaneously revealing the roles of the divine.  

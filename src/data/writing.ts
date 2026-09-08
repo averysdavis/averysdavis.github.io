@@ -3,6 +3,8 @@ export interface WritingItem {
   url: string;
   date: string;
   description: string;
+  /** Features this item in the homepage's "Selected Writings" list. */
+  pinned?: boolean;
 }
 
 const data: WritingItem[] = [];

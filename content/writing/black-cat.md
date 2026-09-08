@@ -2,7 +2,6 @@
 title: 'Abuse and Humanity in The Black Cat'
 date: '2025-06-01'
 description: 'A look at Edgar Allan Poe''s short story "The Black Cat." The narrator''s hypocrisy, deflection of blame, and obsession with control aren''t symptoms of madness, but proof that the capacity for abuse is a deeply human trait.'
-pinned: true
 ---
 
 "The Black Cat" is a short story by Edgar Allan Poe where a man recounts in the first person, a series of events that landed him in a jail cell. The story follows the narrator as he becomes increasingly violent at the expense of his many pets, especially his favorite cat Pluto, and his wife. Throughout the story, the narrator is keenly aware that his actions are crimes and immoral, yet he continuously describes the circumstances that he insists justify his actions. With this short story, Poe uses the narrator's violent actions to reveal how abuse, especially justification of said abuse, is inseparable from human nature.  

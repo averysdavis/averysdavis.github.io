@@ -9,20 +9,14 @@ export interface WritingItem {
   description: string;
   isExternal: boolean;
   source: string;
+  /** Features this item in the homepage's "Selected Writings" list. */
   pinned: boolean;
   /** Whether an external-styled item opens in a new tab. PDFs open in place. */
   newTab: boolean;
 }
 
-/**
- * Pinned items lead regardless of date, then newest-first order;
- * undated guides sort by title at the end.
- */
+/** Newest-first order; undated guides sort by title at the end. */
 export function compareWritingItems(a: WritingItem, b: WritingItem): number {
-  if (a.pinned !== b.pinned) {
-    return a.pinned ? -1 : 1;
-  }
-
   if (!a.date && !b.date) {
     return a.title.localeCompare(b.title) || a.url.localeCompare(b.url);
   }
@@ -61,7 +55,7 @@ export function getWritingItems(): WritingItem[] {
     ...item,
     isExternal: true,
     source: externalSource(item.url),
-    pinned: false,
+    pinned: Boolean(item.pinned),
     newTab: true,
   }));
 

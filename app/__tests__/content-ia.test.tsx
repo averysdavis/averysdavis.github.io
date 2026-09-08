@@ -11,9 +11,9 @@ import HomePage from '../page';
 import WritingPage from '../writing/page';
 
 describe('writing information architecture', () => {
-  it('surfaces up to the six newest dated items on the homepage, presentations included', () => {
+  it('surfaces up to six pinned items on the homepage, presentations included', () => {
     const expected = [...getWritingItems(), ...getPresentationItems()]
-      .filter((item) => item.date)
+      .filter((item) => item.pinned && item.date)
       .sort(compareWritingItems)
       .slice(0, 6);
 
@@ -31,10 +31,10 @@ describe('writing information architecture', () => {
   });
 
   it('marks presentations as PDFs on the homepage and opens them in place', () => {
-    // Only presentations that actually make the homepage's top 6 (pinned
-    // essays can crowd out an unpinned presentation) should be checked here.
+    // Only presentations that are actually pinned for the homepage should be
+    // checked here.
     const expectedOnHome = [...getWritingItems(), ...getPresentationItems()]
-      .filter((item) => item.date)
+      .filter((item) => item.pinned && item.date)
       .sort(compareWritingItems)
       .slice(0, 6)
       .filter((item) => item.source === 'PDF');

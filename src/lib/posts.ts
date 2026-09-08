@@ -14,7 +14,7 @@ export interface PostFrontmatter {
   image?: string;
   /** Required whenever `image` is set. */
   imageAlt?: string;
-  /** Keeps a post pinned first in the writing index, ahead of date order. */
+  /** Features this post in the homepage's "Selected Writings" list. */
   pinned?: boolean;
 }
 
