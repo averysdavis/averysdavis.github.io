@@ -60,8 +60,7 @@ const data: Research[] = [
     subtitle: 'miRcore (Genes In Diseases And Symptoms)',
     link: '/pdfs/FTD_GIDAS.pdf',
     image: '/images/research/GIDAS.png',
-    imageAlt:
-      'The letters G-I-D-A-S, where the I is a DNA double helix."',
+    imageAlt: 'The letters G-I-D-A-S, where the I is a DNA double helix."',
     date: '2025-5-20',
     desc: 'Analyzing GEO datasets of peripheral blood gene expression data. Used KEGG pathwyas and GeneCards to identify pathways, specifically Necroptosis and Phagosome pathways.',
     tech: ['Python', 'R'],
