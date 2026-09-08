@@ -26,9 +26,9 @@ describe('ResumeNav', () => {
       'href',
       '#skills',
     );
-    expect(screen.getByRole('link', { name: /references/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: /awards/i })).toHaveAttribute(
       'href',
-      '#references',
+      '#awards',
     );
   });
 

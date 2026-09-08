@@ -7,7 +7,7 @@
 .resume-page .education .title,
 .resume-page .experience .title,
 .resume-page .skills .title,
-.resume-page .references .title {
+.resume-page .awards .title {
   margin-bottom: 2.5rem;
   text-align: left;
 }
@@ -15,7 +15,7 @@
 .resume-page .education .title h2,
 .resume-page .experience .title h2,
 .resume-page .skills .title h2,
-.resume-page .references .title h2 {
+.resume-page .awards .title h2 {
   font-family: var(--font-mono);
   font-size: var(--text-2xs);
   font-weight: var(--font-weight-medium);
@@ -34,10 +34,6 @@
 
 .resume-page .skills .title p {
   font-size: var(--text-md);
-}
-
-.resume-page .references {
-  margin: var(--spacing-8) 0;
 }
 
 /* Resume page specific */

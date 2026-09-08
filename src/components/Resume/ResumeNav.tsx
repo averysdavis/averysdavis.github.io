@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 const sections = [
   { name: 'Experience', id: 'experience' },
+  { name: 'Awards', id: 'awards' },
   { name: 'Education', id: 'education' },
   { name: 'Skills', id: 'skills' },
-  { name: 'References', id: 'references' },
 ] as const;
 
 type SectionId = (typeof sections)[number]['id'];

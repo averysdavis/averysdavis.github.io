@@ -10,31 +10,62 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Languages
+  // Coding Languages
   {
     title: 'Python',
     competency: 3,
-    category: ['Languages'],
+    category: ['Coding Languages'],
   },
   {
     title: 'Java',
     competency: 4,
-    category: ['Languages'],
+    category: ['Coding Languages'],
   },
   {
     title: 'JavaScript',
     competency: 4,
-    category: ['Languages', 'Web Development'],
+    category: ['Coding Languages', 'Web Development'],
   },
   {
     title: 'HTML',
     competency: 5,
-    category: ['Languages', 'Web Development'],
+    category: ['Coding Languages', 'Web Development'],
   },
   {
     title: 'CSS',
     competency: 5,
-    category: ['Languages', 'Web Development'],
+    category: ['Coding Languages', 'Web Development'],
+  },
+  // Languages
+  {
+    title: 'English',
+    competency: 5,
+    category: ['Languages'],
+  },
+  {
+    title: 'Chinese (Simplified)',
+    competency: 5,
+    category: ['Languages'],
+  },
+  {
+    title: 'Chinese (Traditional)',
+    competency: 3,
+    category: ['Languages'],
+  },
+  {
+    title: 'Korean',
+    competency: 2,
+    category: ['Languages'],
+  },
+  {
+    title: 'Tagalog',
+    competency: 1,
+    category: ['Languages'],
+  },
+  {
+    title: 'Hokkien',
+    competency: 3,
+    category: ['Languages'],
   },
   // Web Development
   {
@@ -87,6 +118,11 @@ const skills: Skill[] = [
   // Geospatial
   {
     title: 'QGIS',
+    competency: 5,
+    category: ['Geospatial'],
+  },
+  {
+    title: 'ArcGIS',
     competency: 5,
     category: ['Geospatial'],
   },

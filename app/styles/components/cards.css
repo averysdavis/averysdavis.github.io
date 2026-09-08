@@ -491,3 +491,35 @@
   text-transform: uppercase;
   color: var(--color-fg-light);
 }
+
+.award-container {
+  margin-bottom: 1.5em;
+}
+
+.award-container h3 {
+  font-weight: var(--font-weight-normal);
+}
+
+.award-container .award-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-normal);
+  margin-bottom: 0.25em;
+  text-transform: none;
+  color: var(--color-fg-bold);
+}
+
+.award-container .award-issuer {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-normal);
+  color: var(--color-fg-light);
+  margin-bottom: 0.5em;
+  padding-top: 0.2em;
+  text-transform: none;
+}
+
+.award-description {
+  font-size: var(--text-sm);
+  color: var(--color-fg-light);
+  line-height: var(--leading-snug);
+}

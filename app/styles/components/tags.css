@@ -75,6 +75,11 @@
   white-space: nowrap;
 }
 
+.skill-tag-competency {
+  color: var(--color-fg-light);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Tech tags — squared, quiet, mono. */
 .tech-tag {
   font-family: var(--font-mono);

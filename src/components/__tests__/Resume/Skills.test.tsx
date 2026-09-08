@@ -162,8 +162,12 @@ describe('Skills', () => {
     const skillNames = Array.from(skillTags).map((el) => el.textContent);
 
     // Python (5) and TypeScript (5) should come before JavaScript (4)
-    const jsIndex = skillNames.indexOf('JavaScript');
-    const pythonIndex = skillNames.indexOf('Python');
+    const jsIndex = skillNames.findIndex((name) =>
+      name?.startsWith('JavaScript'),
+    );
+    const pythonIndex = skillNames.findIndex((name) =>
+      name?.startsWith('Python'),
+    );
     expect(pythonIndex).toBeLessThan(jsIndex);
   });
 });

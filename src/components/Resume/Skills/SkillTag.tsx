@@ -35,7 +35,10 @@ export default function SkillTag({ data, categories }: SkillTagProps) {
       title={`${title}: ${competency} out of ${MAX_COMPETENCY}`}
       aria-label={`${title}: proficiency ${competency} out of ${MAX_COMPETENCY}`}
     >
-      <span className="skill-tag-name">{title}</span>
+      <span className="skill-tag-name">
+        {title}
+        <span className="skill-tag-competency"> ({competency})</span>
+      </span>
     </span>
   );
 }

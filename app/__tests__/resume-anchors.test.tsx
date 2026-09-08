@@ -1,15 +1,16 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import { describe, expect, it } from 'vitest';
 
+import Awards from '@/components/Resume/Awards';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
-import References from '@/components/Resume/References';
 import Skills from '@/components/Resume/Skills';
+import awards from '@/data/resume/awards';
 import degrees from '@/data/resume/degrees';
 import { categories, skills } from '@/data/resume/skills';
 import work from '@/data/resume/work';
 
-const SECTIONS = ['experience', 'education', 'skills', 'references'];
+const SECTIONS = ['experience', 'awards', 'education', 'skills'];
 
 /**
  * The section components used to render their own `<div class="link-to" id>`
@@ -22,14 +23,14 @@ function renderResumeSections() {
       <section id="experience">
         <Experience data={work} />
       </section>
+      <section id="awards">
+        <Awards data={awards} />
+      </section>
       <section id="education">
         <Education data={degrees} />
       </section>
       <section id="skills">
         <Skills skills={skills} categories={categories} />
-      </section>
-      <section id="references">
-        <References />
       </section>
     </>,
   );
