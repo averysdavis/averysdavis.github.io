@@ -20,7 +20,7 @@ export default function Hero() {
             </a>
             , leading the KhanLab-BayArea{' '}
             <a
-              href="https://sites.google.com/khanlabschool.org/igem/home"
+              href="https://igem.org/"
               className="hero-highlight"
             >
               iGEM

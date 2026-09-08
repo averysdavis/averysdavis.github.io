@@ -15,7 +15,7 @@ const work: Position[] = [
   {
     name: 'International Genetically Engineered Machine (iGEM)',
     position: 'Team Lead, KhanLab-BayArea Team',
-    url: 'https://sites.google.com/khanlabschool.org/igem/home',
+    url: 'https://igem.org/',
     startDate: '2024-08-20',
     summary: `Co-leading a team of 25+ students and mentors across 8 schools through an international synthetic biology competition. Engineering 2 full stack documentation websites serving as primary knowledge repositories for projects, delivering 20+ biology workshops to 200+ K-12 students and senior citizens with multilingual instruction.`,
   },
