@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /api
 
-Sitemap: https://averysdavis.github.io/sitemap.xml
+Sitemap: https://averysdavis.com/sitemap.xml
