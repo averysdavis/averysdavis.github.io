@@ -27,10 +27,11 @@ const data: Research[] = [
     subtitle: 'Stanford Deliberative Democracy Lab',
     link: 'https://sites.google.com/khanlabschool.org/bayarea-urbanheat/home',
     image: '/images/research/homestead_map.png',
-    imageAlt: 'A map of Homestead High School where the fields are hotter than the surrounding area.',
+    imageAlt:
+      'A map of Homestead High School where the fields are hotter than the surrounding area.',
     date: '2025-10-20',
     desc: 'Mapping land-surface temperature data in Silicon Valley to investigate urban heat. Found correlation of artifical turf and higher temperatures across 5 sites, primarily affecting high schools.',
-    tech:['QGIS'],
+    tech: ['QGIS'],
     featured: true,
   },
   {

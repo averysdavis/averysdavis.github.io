@@ -23,7 +23,9 @@ export default function ContactPage() {
         <div className="contact-content">
           <div className="contact-email-block">
             <EmailLink />
-            <p className="contact-hint">Email me if you want a reply within a reasonable amount of time</p>
+            <p className="contact-hint">
+              Email me if you want a reply within a reasonable amount of time
+            </p>
           </div>
 
           <div className="contact-divider">
