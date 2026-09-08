@@ -34,34 +34,35 @@ const profile = JSON.parse(
 
 const OUTPUT = join(process.cwd(), 'public', 'og.png');
 const METADATA_OUTPUT = join(process.cwd(), 'public', 'og.meta.json');
+const PORTRAIT_PATH = join(process.cwd(), 'public', 'images', 'me.jpg');
 const SIZE = { width: 1200, height: 630 };
 const PROFILE_SNAPSHOT = ogProfileSnapshot(profile);
 const generatorSource = await readFile(new URL(import.meta.url), 'utf8');
+const portraitBuffer = await readFile(PORTRAIT_PATH);
+const portraitDataUri = `data:image/jpeg;base64,${portraitBuffer.toString('base64')}`;
+// The portrait isn't a profile.json field, so it isn't covered by
+// PROFILE_SNAPSHOT — its bytes are folded in directly instead, and
+// check-og.mjs reads the same file the same way so the two stay in sync.
 const generatorDigest = createHash('sha256')
   .update(generatorSource)
   .update('\0')
   .update(JSON.stringify(PROFILE_SNAPSHOT))
+  .update('\0')
+  .update(portraitBuffer)
   .digest('hex');
 
 const INK = '#0e1116';
 const PAPER = '#f2f1ec';
 const GRAPHITE = '#545a63';
-const ULTRAMARINE = '#1b2fbf';
-const HAIRLINE = 'rgba(35, 39, 46, 0.18)';
 
 /**
- * The card reports selected static profile facts.
- *
- * The live age is deliberately absent: the card is baked ahead of time, so a
- * ticking value would be frozen and quietly wrong. For the same reason the
- * card carries no amber — nothing on it is live, and the signal colour only
- * means something while that stays true.
+ * Mirrors the homepage hero's tagline. Kept as a literal here (rather than
+ * imported) because this script runs as plain Node, not through the
+ * TypeScript path aliases `src/lib/utils.ts` lives behind — so it has to be
+ * kept in sync with SITE_DESCRIPTION by hand.
  */
-const READOUT = [
-  { label: 'Countries visited', value: String(profile.countriesVisited) },
-  { label: 'Computing since', value: String(profile.computingSince) },
-  { label: 'Based in', value: profile.currentCity },
-];
+const TAGLINE =
+  'Senior at Khan Lab School. Team Co-Lead of the KhanLab-BayArea iGEM team, an international synthetic biology competition.';
 
 const [FIRST_NAME, ...REST_OF_NAME] = profile.name.split(' ');
 
@@ -89,38 +90,29 @@ async function loadGoogleFont(family, weight) {
   return font.arrayBuffer();
 }
 
-function readoutCell(cell, index) {
+const PORTRAIT_SIZE = 340;
+
+/**
+ * The homepage hero frames the portrait in a bordered, padded box rather
+ * than letting the photo bleed to the edge — reproduced here at card scale.
+ */
+function portrait() {
   return h(
     'div',
     {
-      key: cell.label,
       style: {
         display: 'flex',
-        flexDirection: 'column',
-        flex: 1,
-        padding: index === 0 ? '26px 32px 40px 0' : '26px 32px 40px',
-        borderLeft: index === 0 ? 'none' : `1px solid ${HAIRLINE}`,
+        border: `2px solid ${INK}`,
+        background: '#ffffff',
+        padding: 10,
       },
     },
-    h(
-      'span',
-      {
-        style: {
-          fontFamily: 'Mono',
-          fontSize: 17,
-          letterSpacing: '0.14em',
-          textTransform: 'uppercase',
-          color: GRAPHITE,
-          marginBottom: 14,
-        },
-      },
-      cell.label,
-    ),
-    h(
-      'span',
-      { style: { fontFamily: 'Mono', fontSize: 30, color: INK } },
-      cell.value,
-    ),
+    h('img', {
+      src: portraitDataUri,
+      width: PORTRAIT_SIZE,
+      height: PORTRAIT_SIZE,
+      style: { objectFit: 'cover' },
+    }),
   );
 }
 
@@ -132,25 +124,25 @@ function card() {
         width: '100%',
         height: '100%',
         display: 'flex',
-        flexDirection: 'column',
+        alignItems: 'center',
         justifyContent: 'space-between',
         background: PAPER,
-        padding: '72px 80px 0',
+        padding: '0 80px',
         borderTop: `10px solid ${INK}`,
       },
     },
     h(
       'div',
-      { style: { display: 'flex', flexDirection: 'column' } },
+      { style: { display: 'flex', flexDirection: 'column', maxWidth: 660 } },
       h(
         'div',
         {
           style: {
             fontFamily: 'Display',
-            fontSize: 128,
+            fontSize: 96,
             fontWeight: 800,
-            letterSpacing: '-0.045em',
-            lineHeight: 0.92,
+            letterSpacing: '-0.04em',
+            lineHeight: 0.95,
             color: INK,
             display: 'flex',
             flexDirection: 'column',
@@ -163,25 +155,19 @@ function card() {
         'div',
         {
           style: {
-            marginTop: 34,
+            marginTop: 30,
             fontFamily: 'Mono',
-            fontSize: 25,
-            letterSpacing: '0.02em',
+            fontSize: 21,
+            lineHeight: 1.6,
+            letterSpacing: '0.01em',
             color: GRAPHITE,
             display: 'flex',
           },
         },
-        h('span', { style: { color: ULTRAMARINE } }, profile.employer),
-        // Satori collapses a leading space in a flex child, so the gap before
-        // the em dash is set as spacing rather than as whitespace.
-        h('span', { style: { marginLeft: '0.5em' } }, `— ${profile.focus}`),
+        TAGLINE,
       ),
     ),
-    h(
-      'div',
-      { style: { display: 'flex', borderTop: `2px solid ${INK}` } },
-      ...READOUT.map(readoutCell),
-    ),
+    portrait(),
   );
 }
 

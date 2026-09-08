@@ -19,10 +19,7 @@ export default function Hero() {
               {profile.employer}
             </a>
             , leading the KhanLab-BayArea{' '}
-            <a
-              href="https://igem.org/"
-              className="hero-highlight"
-            >
+            <a href="https://igem.org/" className="hero-highlight">
               iGEM
             </a>{' '}
             team, which competes internationally in genetic engineering, and my

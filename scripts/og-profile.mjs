@@ -12,10 +12,5 @@
 export function ogProfileSnapshot(profile) {
   return {
     name: profile.name,
-    employer: profile.employer,
-    focus: profile.focus,
-    countriesVisited: profile.countriesVisited,
-    computingSince: profile.computingSince,
-    currentCity: profile.currentCity,
   };
 }

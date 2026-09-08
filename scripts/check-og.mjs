@@ -7,12 +7,16 @@ import { ogProfileSnapshot } from './og-profile.mjs';
 
 const root = process.cwd();
 const EXPECTED_SIZE = { width: 1200, height: 630 };
-const [image, metadata, profile, generatorSource] = await Promise.all([
-  readFile(join(root, 'public', 'og.png')),
-  readFile(join(root, 'public', 'og.meta.json'), 'utf8').then(JSON.parse),
-  readFile(join(root, 'src', 'data', 'profile.json'), 'utf8').then(JSON.parse),
-  readFile(join(root, 'scripts', 'generate-og.mjs'), 'utf8'),
-]);
+const [image, metadata, profile, generatorSource, portraitBuffer] =
+  await Promise.all([
+    readFile(join(root, 'public', 'og.png')),
+    readFile(join(root, 'public', 'og.meta.json'), 'utf8').then(JSON.parse),
+    readFile(join(root, 'src', 'data', 'profile.json'), 'utf8').then(
+      JSON.parse,
+    ),
+    readFile(join(root, 'scripts', 'generate-og.mjs'), 'utf8'),
+    readFile(join(root, 'public', 'images', 'me.jpg')),
+  ]);
 
 if (
   image.length < 24 ||
@@ -27,10 +31,14 @@ const actualSize = {
   height: image.readUInt32BE(20),
 };
 const expectedProfile = ogProfileSnapshot(profile);
+// The portrait isn't a profile.json field, so it rides along in the digest
+// directly — generate-og.mjs folds in the same file's bytes the same way.
 const expectedGeneratorDigest = createHash('sha256')
   .update(generatorSource)
   .update('\0')
   .update(JSON.stringify(expectedProfile))
+  .update('\0')
+  .update(portraitBuffer)
   .digest('hex');
 const expectedImageDigest = createHash('sha256').update(image).digest('hex');
 
