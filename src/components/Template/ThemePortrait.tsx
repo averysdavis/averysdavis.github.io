@@ -1,5 +1,3 @@
-import { AUTHOR_NAME } from '@/lib/utils';
-
 interface ThemePortraitProps {
   width: number;
   height: number;
@@ -23,7 +21,7 @@ export default function ThemePortrait({
       {/* biome-ignore lint/performance/noImgElement: Using native img to avoid next/image runtime overhead for static export */}
       <img
         src="/images/me.jpg"
-        alt={AUTHOR_NAME}
+        alt="Avery Davis smiling in front of an angel's trumpet plant"
         width={width}
         height={height}
         loading={priority ? 'eager' : 'lazy'}

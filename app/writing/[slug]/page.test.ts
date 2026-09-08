@@ -44,8 +44,8 @@ describe('writing post metadata', () => {
     expect(metadata.openGraph?.images).toEqual([
       {
         url: `${SITE_URL}/images/me.jpg`,
-        width: 1198,
-        height: 1198,
+        width: 1280,
+        height: 1280,
         alt: 'A test portrait.',
       },
     ]);

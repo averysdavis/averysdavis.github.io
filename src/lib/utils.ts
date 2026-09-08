@@ -13,8 +13,8 @@ export const AUTHOR_NAME = profile.name;
  */
 export const SITE_IMAGE_PATH = '/images/me.jpg';
 export const SITE_IMAGE_DIMENSIONS = {
-  width: 1198,
-  height: 1198,
+  width: 1280,
+  height: 1280,
 } as const;
 
 /**
