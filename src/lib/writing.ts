@@ -1,3 +1,4 @@
+import presentations from '@/data/presentations';
 import externalWriting from '@/data/writing';
 import { getAllPosts } from '@/lib/posts';
 
@@ -9,6 +10,8 @@ export interface WritingItem {
   isExternal: boolean;
   source: string;
   pinned: boolean;
+  /** Whether an external-styled item opens in a new tab. PDFs open in place. */
+  newTab: boolean;
 }
 
 /**
@@ -52,13 +55,28 @@ export function getWritingItems(): WritingItem[] {
     isExternal: false,
     source: 'On this site',
     pinned: Boolean(post.pinned),
+    newTab: false,
   }));
   const external: WritingItem[] = externalWriting.map((item) => ({
     ...item,
     isExternal: true,
     source: externalSource(item.url),
     pinned: false,
+    newTab: true,
   }));
 
   return [...internal, ...external].sort(compareWritingItems);
+}
+
+/** PDFs and similar; styled like external links but open in the same tab. */
+export function getPresentationItems(): WritingItem[] {
+  return presentations
+    .map((item) => ({
+      ...item,
+      isExternal: true,
+      source: 'PDF',
+      pinned: Boolean(item.pinned),
+      newTab: false,
+    }))
+    .sort(compareWritingItems);
 }

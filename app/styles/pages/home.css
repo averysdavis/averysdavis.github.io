@@ -228,6 +228,10 @@
   color: var(--color-fg-light);
 }
 
+.home-writing-pdf-mark {
+  color: var(--color-accent);
+}
+
 .home-writing h2 {
   margin: 0.35rem 0 0;
   font-family: var(--font-display);

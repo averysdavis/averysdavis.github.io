@@ -45,6 +45,7 @@ describe('getWritingItems', () => {
       isExternal: true,
       source: 'Example',
       pinned,
+      newTab: true,
     });
 
     expect(
@@ -70,6 +71,7 @@ describe('getWritingItems', () => {
       isExternal: true,
       source: 'Example',
       pinned,
+      newTab: true,
     });
 
     const pinned = item('Older but pinned', '2020-01-01', true);

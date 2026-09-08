@@ -104,6 +104,10 @@
   margin-bottom: 0.4rem;
 }
 
+.writing-source--pdf {
+  color: var(--color-accent);
+}
+
 .writing-title {
   grid-column: 2;
   grid-row: 1;

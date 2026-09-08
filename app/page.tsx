@@ -11,7 +11,11 @@ import {
   SITE_DESCRIPTION,
   SITE_URL,
 } from '@/lib/utils';
-import { getWritingItems } from '@/lib/writing';
+import {
+  compareWritingItems,
+  getPresentationItems,
+  getWritingItems,
+} from '@/lib/writing';
 
 export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
@@ -21,8 +25,9 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const recentWriting = getWritingItems()
+  const recentWriting = [...getWritingItems(), ...getPresentationItems()]
     .filter((item) => item.date)
+    .sort(compareWritingItems)
     .slice(0, 6);
 
   return (
@@ -45,7 +50,10 @@ export default function HomePage() {
             const content = (
               <>
                 <span className="home-writing-meta">
-                  {formatDate(item.date)} · {item.source}
+                  {formatDate(item.date)}
+                  {item.source === 'PDF' && (
+                    <span className="home-writing-pdf-mark"> · PDF</span>
+                  )}
                 </span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
@@ -56,12 +64,15 @@ export default function HomePage() {
               <a
                 key={item.url}
                 href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(item.newTab
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
                 className="home-writing-item"
               >
                 {content}
-                <span className="sr-only"> (opens in a new tab)</span>
+                {item.newTab && (
+                  <span className="sr-only"> (opens in a new tab)</span>
+                )}
               </a>
             ) : (
               <Link

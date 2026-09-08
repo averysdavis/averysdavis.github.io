@@ -12,7 +12,11 @@ import {
   WRITING_DESCRIPTION,
 } from '@/lib/schema';
 import { formatDate } from '@/lib/utils';
-import { getWritingItems, type WritingItem as Item } from '@/lib/writing';
+import {
+  getPresentationItems,
+  getWritingItems,
+  type WritingItem as Item,
+} from '@/lib/writing';
 
 const WRITING_URL = `${SITE_URL}/writing/`;
 
@@ -49,7 +53,13 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
           </time>
         )}
         {item.isExternal && (
-          <span className="writing-source">
+          <span
+            className={
+              item.source === 'PDF'
+                ? 'writing-source writing-source--pdf'
+                : 'writing-source'
+            }
+          >
             {item.source}
             <span className="writing-external" aria-hidden="true">
               ↗
@@ -59,7 +69,7 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
       </div>
       <h3 className="writing-title">{item.title}</h3>
       <p className="writing-description">{item.description}</p>
-      {item.isExternal && (
+      {item.newTab && (
         // The arrow is decorative, so the warning has to be spoken.
         <span className="sr-only"> (opens in a new tab)</span>
       )}
@@ -70,8 +80,9 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
     return (
       <a
         href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(item.newTab
+          ? { target: '_blank', rel: 'noopener noreferrer' }
+          : {})}
         className="writing-item"
       >
         {content}
@@ -91,6 +102,8 @@ export default function WritingPage() {
   const internal = allItems.filter((item) => !item.isExternal);
   const external = allItems.filter((item) => item.isExternal && item.date);
   const guides = allItems.filter((item) => item.isExternal && !item.date);
+
+  const presentations = getPresentationItems();
 
   const latestDatedItem = allItems.find((item) => item.date);
   const latestPostDate = latestDatedItem?.date;
@@ -129,7 +142,7 @@ export default function WritingPage() {
 
         <section className="writing-group" aria-labelledby="writing-here">
           <h2 id="writing-here" className="writing-section-label">
-            Essays on this site
+            Essays / Papers
           </h2>
           <div className="writing-list">
             {internal.map((item) => (
@@ -137,6 +150,22 @@ export default function WritingPage() {
             ))}
           </div>
         </section>
+
+        {presentations.length > 0 && (
+          <section
+            className="writing-group"
+            aria-labelledby="writing-presentations"
+          >
+            <h2 id="writing-presentations" className="writing-section-label">
+              Presentations / Posters
+            </h2>
+            <div className="writing-list">
+              {presentations.map((item) => (
+                <WritingItem key={item.url} item={item} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {external.length > 0 && (
           <section
