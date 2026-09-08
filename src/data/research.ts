@@ -30,6 +30,7 @@ const data: Research[] = [
     imageAlt: 'A map of Homestead High School where the fields are hotter than the surrounding area.',
     date: '2025-10-20',
     desc: 'Mapping land-surface temperature data in Silicon Valley to investigate urban heat. Found correlation of artifical turf and higher temperatures across 5 sites, primarily affecting high schools.',
+    tech:['QGIS'],
     featured: true,
   },
   {
