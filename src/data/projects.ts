@@ -8,11 +8,13 @@ export interface Project {
   desc: string;
   tech?: string[];
   featured?: boolean;
+  inProgress?: boolean;
 }
 
 const data: Project[] = [
   {
-    title: 'Wiki 2026 - In Progress',
+    title: 'Wiki 2026',
+    inProgress: true,
     subtitle: 'International Genetically Engineered Machine (iGEM)',
     link: 'https://2026.igem.wiki/khanlab-bayarea/',
     image: '/images/projects/wiki26-temp.png',

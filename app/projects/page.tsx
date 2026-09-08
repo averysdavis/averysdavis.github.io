@@ -24,6 +24,9 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function ProjectsPage() {
+  const inProgressProjects = data.filter((p) => p.inProgress);
+  const completeProjects = data.filter((p) => !p.inProgress);
+
   return (
     <PageWrapper>
       <SchemaGraph
@@ -45,11 +48,27 @@ export default function ProjectsPage() {
           <h1 className="page-title">Projects</h1>
         </header>
 
-        <div className="projects-grid projects-grid--featured">
-          {data.map((project) => (
-            <Cell data={project} key={project.title} />
-          ))}
-        </div>
+        {inProgressProjects.length > 0 && (
+          <section className="projects-featured">
+            <h2 className="projects-section-title">In Progress</h2>
+            <div className="projects-grid projects-grid--featured">
+              {inProgressProjects.map((project) => (
+                <Cell data={project} key={project.title} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {completeProjects.length > 0 && (
+          <section className="projects-other">
+            <h2 className="projects-section-title">Complete</h2>
+            <div className="projects-grid">
+              {completeProjects.map((project) => (
+                <Cell data={project} key={project.title} />
+              ))}
+            </div>
+          </section>
+        )}
       </section>
     </PageWrapper>
   );

@@ -350,8 +350,8 @@
   background: var(--color-border-alt);
 }
 
-/* Lead — hierarchy through breathing room and a measured size step, rather
-   than making the first company twice as loud as the rest of the history. */
+/* Lead — hierarchy through breathing room alone; every role's text renders
+   at the same size regardless of tier. */
 .jobs-container--lead {
   padding-top: 1.5rem;
   padding-bottom: 4.5rem;
@@ -361,31 +361,22 @@
   top: calc(1.5rem + 0.6rem);
 }
 
-.jobs-container--lead header h3 {
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-black);
-  letter-spacing: var(--tracking-display);
-}
-
 .jobs-container--lead .summary {
-  font-size: var(--text-lg);
   color: var(--color-fg);
 }
 
-/* Early — internships and student-era work, stepped down so a
-   decade of history stays on the page without competing. */
+/* Early — internships and student-era work, stepped down in spacing only so
+   a decade of history stays on the page without competing. */
 .jobs-container--early {
   padding-bottom: 2rem;
 }
 
 .jobs-container--early header h3 {
-  font-size: var(--text-md);
   margin-bottom: 0.5rem;
 }
 
 .jobs-container--early .summary,
 .jobs-container--early .points li {
-  font-size: var(--text-sm);
   line-height: var(--leading-snug);
   margin-bottom: 0.4rem;
 }
