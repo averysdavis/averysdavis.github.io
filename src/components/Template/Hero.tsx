@@ -14,16 +14,16 @@ export default function Hero() {
           </h1>
 
           <p className="hero-tagline">
-            I&apos;m a {profile.role} at{' '}
+            I&apos;m a {profile.role.toLowerCase()} at{' '}
             <a href="https://khanlabschool.org/" className="hero-highlight">
               {profile.employer}
-            </a>
-            {' '}where I lead both the KhanLab-BayArea{' '}
+            </a>{' '}
+            where I lead both the KhanLab-BayArea{' '}
             <a href="https://igem.org/" className="hero-highlight">
               iGEM
             </a>{' '}
-            team and the Speech and Debate team. I&apos;m interested in synthetic
-            biology, computer science, engineering, plants, and more!
+            team and the Speech and Debate team. I&apos;m interested in
+            synthetic biology, computer science, engineering, plants, and more!
           </p>
 
           <div className="hero-cta">
