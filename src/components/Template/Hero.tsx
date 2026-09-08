@@ -18,12 +18,11 @@ export default function Hero() {
             <a href="https://khanlabschool.org/" className="hero-highlight">
               {profile.employer}
             </a>
-            , leading the KhanLab-BayArea{' '}
+            {' '}where I lead both the KhanLab-BayArea{' '}
             <a href="https://igem.org/" className="hero-highlight">
               iGEM
             </a>{' '}
-            team, which competes internationally in genetic engineering, and my
-            school's Speech and Debate team. I&apos;m interested in synthetic
+            team and the Speech and Debate team. I&apos;m interested in synthetic
             biology, computer science, engineering, plants, and more!
           </p>
 
