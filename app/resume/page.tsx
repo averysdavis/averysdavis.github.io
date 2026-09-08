@@ -27,10 +27,11 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <p className="resume-summary">
-            High school student at Khan Lab School focused on synthetic biology,
+            I am a senior at Khan Lab School focused on synthetic biology,
             engineering, and Computer Science. I lead the KhanLab-BayArea iGEM
-            team and Speech and Debate. I have research experience through NASA
-            GeneLab, Stanford Deliberative Democracy Lab, and UCLA.
+            team and my school's Speech and Debate team. I have research
+            experience through NASA GeneLab, Stanford Deliberative Democracy
+            Lab, and UCLA.
           </p>
           {/* Print-only, but real markup rather than CSS `content`, so it is
               selectable, linkable, and reads from the shared profile. The

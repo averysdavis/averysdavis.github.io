@@ -1,7 +1,7 @@
 ---
 title: 'Modeling Cyclones with Polar Coordinates'
 date: '2026-03-21'
-description: 'Modeling the spiral rainbands of tropical cyclones with a logarithmic polar equation. Using derivatives, it explains why the spiral expands the way it does, then computes the arc length and enclosed area of a real storm sized example.'
+description: 'Modeling the spiral rainbands of tropical cyclones with a logarithmic polar equation. Using derivatives, I explain why the spiral expands the way it does, then compute the arc length and enclosed area of a real storm sized example.'
 pinned: true
 ---
 

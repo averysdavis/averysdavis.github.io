@@ -18,7 +18,6 @@ const degrees: Degree[] = [
       'Physics & Engineering',
       'Synthetic Biology',
       'Physics C: Mechanics',
-      'Frontend Web Development',
       'JavaScript',
       'Statistics',
     ],

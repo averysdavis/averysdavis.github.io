@@ -27,6 +27,14 @@ const work: Position[] = [
     summary: `Organizing weekly practice for 20+ students, teaching public speaking skills, organizing tournament sign ups and finances.`,
   },
   {
+    name: 'Khan Lab School',
+    position: 'Student Teacher, Frontend Web Development',
+    url: 'https://khanlabschool.org/',
+    startDate: '2026-01-01',
+    endDate: '2026-06-20',
+    summary: `Taught 4 students frontend web development, including HTML, CSS, and Bootstrap, for a semester long course. Topics covered included code editors, git, web accessibility, JavaScript libraries, and more.`,
+  },
+  {
     name: 'Stanford Deliberative Democracy Lab',
     position: 'Climate Research Fellow',
     url: 'https://deliberation.stanford.edu/',

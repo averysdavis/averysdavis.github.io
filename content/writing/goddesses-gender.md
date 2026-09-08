@@ -1,7 +1,7 @@
 ---
-title: 'Goddesses and Gender'
+title: 'Greek Goddesses and Gender'
 date: '2024-12-15'
-description: "A Comparative Literature essay on how Homer's Iliad treats goddesses and mortal women completely differently. It argues that divinity, not gender, is what grants Aphrodite, Athena, and Hera the independence, agency, and power that mortal women like Briseis and Andromache are denied."
+description: "An analysis of how Homer's Iliad treats goddesses and mortal women completely differently. Divinity, not gender, is what grants Aphrodite, Athena, and Hera the independence, agency, and power that mortal women like Briseis and Andromache are denied."
 pinned: true
 ---
 

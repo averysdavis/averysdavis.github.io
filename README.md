@@ -1,11 +1,11 @@
-# Michael D'Angelo: Personal Site
+# Avery S. Davis: Personal Site
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/mldangelo/personal-site/node.js.yml?branch=main)](https://github.com/mldangelo/personal-site/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/averysdavis/averysdavis.github.io/node.js.yml?branch=main)](https://github.com/averysdavis/averysdavis.github.io/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/mldangelo/personal-site?style=social)](https://github.com/mldangelo/personal-site/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/mldangelo/personal-site?style=social)](https://github.com/mldangelo/personal-site/network/members)
+[![GitHub Stars](https://img.shields.io/github/stars/averysdavis/averysdavis.github.io?style=social)](https://github.com/averysdavis/averysdavis.github.io/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/averysdavis/averysdavis.github.io?style=social)](https://github.com/averysdavis/averysdavis.github.io/network/members)
 
-The source for [mldangelo.com](https://mldangelo.com), a portfolio, résumé,
+The source for [averysdavis.com](https://averysdavis.com), a portfolio, résumé,
 project archive, and writing site built with
 [Next.js](https://nextjs.org/), [React](https://react.dev/),
 [TypeScript](https://www.typescriptlang.org/), and
@@ -14,7 +14,7 @@ project archive, and writing site built with
 The architecture is reusable and MIT licensed. The content and visual design
 are personal, so a fork needs a full rebrand.
 
-**[Visit the live site →](https://mldangelo.com)**
+**[Visit the live site →](https://averysdavis.com)**
 
 ## What is here
 
@@ -42,8 +42,8 @@ With [GitHub CLI](https://cli.github.com/) and
 [nvm](https://github.com/nvm-sh/nvm) installed:
 
 ```bash
-gh repo fork mldangelo/personal-site --clone
-cd personal-site
+gh repo fork averysdavis/averysdavis.github.io --clone
+cd averysdavis.github.io
 nvm install
 npm ci
 npm run dev

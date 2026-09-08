@@ -39,7 +39,7 @@ export default function HomePage() {
       <section className="home-writing" aria-labelledby="home-writing-title">
         <div className="home-writing-header">
           <div>
-            <h2 id="home-writing-title">Selected writings</h2>
+            <h2 id="home-writing-title">Selected Writings</h2>
           </div>
           <Link href="/writing/" className="home-writing-all">
             View all

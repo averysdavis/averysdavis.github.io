@@ -1,7 +1,7 @@
 ---
 title: 'The Fractured Superego: Asian American Identity and the Limits of Classical Psychoanalysis'
 date: '2026-05-14'
-description: "Sigmund Freud's model of the psyche breaks down when applied to Asian American identity. Starting from the 1992 Los Angeles uprisings and drawing on Frantz Fanon, Claire Kim, Anne Cheng, and other theorists, see how contradictory racial expectations leave the Asian American psyche permanently unresolved."
+description: "Freud's model of the psyche breaks down when applied to Asian American identity. Starting from the 1992 Los Angeles uprisings and drawing on a number of psychoanalysts, see how contradictory racial expectations leave the Asian American psyche permanently unresolved."
 pinned: true
 ---
 

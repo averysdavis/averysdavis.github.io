@@ -1,7 +1,7 @@
 ---
 title: 'Abuse and Humanity in The Black Cat'
 date: '2025-06-01'
-description: 'A Comparative Literature essay on Edgar Allan Poe''s short story "The Black Cat." It argues that the narrator''s hypocrisy, deflection of blame, and obsession with control aren''t symptoms of madness, but proof that the capacity for abuse is a deeply human trait.'
+description: 'A look at Edgar Allan Poe''s short story "The Black Cat." The narrator''s hypocrisy, deflection of blame, and obsession with control aren''t symptoms of madness, but proof that the capacity for abuse is a deeply human trait.'
 pinned: true
 ---
 
