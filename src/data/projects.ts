@@ -17,9 +17,9 @@ const data: Project[] = [
     link: 'https://2026.igem.wiki/khanlab-bayarea/',
     image: '/images/projects/wiki26-temp.png',
     imageAlt:
-      'Website with a purple header and navigation menu; large white text on a wooden background reads, “The Cluck is Ticking.”.',
+      'Website with a purple header and navigation menu; large white text on a wooden background reads, “The Cluck is Ticking.”',
     date: '2026-10-20',
-    desc: 'Documentation website for the KhanLab-BayArea 2025 iGEM project.',
+    desc: 'Documentation website for the KhanLab-BayArea 2026 iGEM project.',
     tech: ['HTML', 'CSS', 'Bootstrap', 'Jinja', 'Flask'],
     featured: true,
   },
@@ -67,7 +67,7 @@ const data: Project[] = [
     imageAlt:
       'A website with the text “Rock The Plastics!” appears over a textured gray background, with a cartoon rock character playing a red guitar on the right side.',
     date: '2025-10-20',
-    desc: 'Documentation website for the KhanLab-BayArea 2026 iGEM project.',
+    desc: 'Documentation website for the KhanLab-BayArea 2025 iGEM project.',
     tech: ['HTML', 'CSS', 'Bootstrap', 'Jinja', 'Flask'],
     featured: true,
   },

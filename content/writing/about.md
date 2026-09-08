@@ -20,7 +20,7 @@ I like to think I can be a chill person.
 - Buff cats
 - Cumin lamb skewers
 - Evapotranspiration
-- Chocolate cover macademia nuts
+- Chocolate covered macadamia nuts
 - Revolutionary Girl Utena
 - Clean CI runs
 
