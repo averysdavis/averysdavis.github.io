@@ -9,6 +9,14 @@ export interface PresentationItem {
 
 const data: PresentationItem[] = [
   {
+    title: 'Plot Twist: NYC Airbnb Data Visualizations',
+    url: '/pdfs/Plot%20Twist.pdf',
+    description:
+      'Different data visualizations of NYC Airbnb prices I made show how the same data can provide insight or mislead readers. Visualizations hand-edited or made with Matplotlib, pandas, and seaborn in Python.',
+    date: '2026-09-09',
+    pinned: true,
+  },
+  {
     title: 'Mathematically Blonde',
     url: '/pdfs/Mathematically%20Blonde.pdf',
     description:
