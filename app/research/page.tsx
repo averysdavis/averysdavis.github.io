@@ -24,8 +24,8 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function ResearchPage() {
-  const featuredResearch = data.filter((r) => r.featured);
-  const otherResearch = data.filter((r) => !r.featured);
+  const inProgressResearch = data.filter((r) => r.inProgress);
+  const completeResearch = data.filter((r) => !r.inProgress);
 
   return (
     <PageWrapper>
@@ -49,22 +49,22 @@ export default function ResearchPage() {
           <p className="page-subtitle">Research and academic work</p>
         </header>
 
-        {featuredResearch.length > 0 && (
+        {inProgressResearch.length > 0 && (
           <section className="projects-featured">
-            <h2 className="projects-section-title">Featured</h2>
+            <h2 className="projects-section-title">In Progress</h2>
             <div className="projects-grid projects-grid--featured">
-              {featuredResearch.map((item) => (
+              {inProgressResearch.map((item) => (
                 <Cell data={item} key={item.title} />
               ))}
             </div>
           </section>
         )}
 
-        {otherResearch.length > 0 && (
+        {completeResearch.length > 0 && (
           <section className="projects-other">
-            <h2 className="projects-section-title">More Research</h2>
+            <h2 className="projects-section-title">Complete</h2>
             <div className="projects-grid">
-              {otherResearch.map((item) => (
+              {completeResearch.map((item) => (
                 <Cell data={item} key={item.title} />
               ))}
             </div>

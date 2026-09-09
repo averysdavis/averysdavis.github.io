@@ -8,11 +8,13 @@ export interface Research {
   desc: string;
   tech?: string[];
   featured?: boolean;
+  inProgress?: boolean;
 }
 
 const data: Research[] = [
   {
     title: 'The Cluck is Ticking',
+    inProgress: true,
     subtitle: 'International Genetically Engineered Machine (iGEM)',
     link: 'https://2026.igem.wiki/khanlab-bayarea/',
     image: '/images/research/dru_igem26.png',
