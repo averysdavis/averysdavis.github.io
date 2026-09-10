@@ -327,12 +327,14 @@
 }
 
 /* The address is the page's one instruction, so it is set as a
-   readout in mono rather than dressed up as a tinted button. */
+   readout in mono rather than dressed up as a tinted button. The alias
+   (accent-colored) sits on its own line above the "[at] domain" line —
+   they're both full-width flex items in a column, so this holds regardless
+   of which alias is showing. */
 .contact-email-link {
   display: inline-flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 100%;
   padding: 0.875rem 0;
   font-family: var(--font-mono);

@@ -56,7 +56,7 @@ export default function Footer() {
             <span id="footer-social-heading" className="footer-social-label">
               Connect
             </span>
-            <ContactIcons />
+            <ContactIcons includeEmail={false} />
           </div>
         </div>
       </div>

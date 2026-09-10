@@ -9,6 +9,7 @@ describe('contact page', () => {
 
     expect(screen.getByRole('main')).toHaveClass('page-main--contact');
     expect(screen.queryByRole('contentinfo')).not.toBeInTheDocument();
-    expect(screen.getAllByRole('link', { name: /^Email/ })).toHaveLength(1);
+    // Deliberately no mailto: link anywhere on the page — see EmailLink.
+    expect(screen.queryAllByRole('link', { name: /^Email/ })).toHaveLength(0);
   });
 });
