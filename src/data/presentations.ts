@@ -10,7 +10,7 @@ export interface PresentationItem {
 const data: PresentationItem[] = [
   {
     title: 'Plot Twist: NYC Airbnb Data Visualizations',
-    url: '/pdfs/Plot%20Twist.pdf',
+    url: '/pdfs/Plot_Twist.pdf',
     description:
       'Different data visualizations of NYC Airbnb prices I made show how the same data can provide insight or mislead readers. Visualizations hand-edited or made with Matplotlib, pandas, and seaborn in Python.',
     date: '2026-09-09',
@@ -18,7 +18,7 @@ const data: PresentationItem[] = [
   },
   {
     title: 'Mathematically Blonde',
-    url: '/pdfs/Mathematically%20Blonde.pdf',
+    url: '/pdfs/Mathematically_Blonde.pdf',
     description:
       "Taylors are typically blonde, so naturally Taylor series are a series of mathematically blonde mathematicians. I am very proud to say this poster was on my math teacher's door for about a month.",
     date: '2026-04-17',
