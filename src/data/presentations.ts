@@ -17,14 +17,6 @@ const data: PresentationItem[] = [
     pinned: true,
   },
   {
-    title: 'Mathematically Blonde',
-    url: '/pdfs/Mathematically_Blonde.pdf',
-    description:
-      "Taylors are typically blonde, so naturally Taylor series are a series of mathematically blonde mathematicians. I am very proud to say this poster was on my math teacher's door for about a month.",
-    date: '2026-04-17',
-    pinned: true,
-  },
-  {
     title: 'Intro to Web Accessibility',
     url: '/pdfs/Web_A11y_Intro.pdf',
     description:
