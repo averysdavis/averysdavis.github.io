@@ -20,6 +20,13 @@ const CONTENT = resolve(ROOT, 'content/writing');
 const failures = [];
 const fail = (page, message) => failures.push({ page, message });
 
+// Paths on this domain served by other GitHub Pages project sites (e.g. the
+// Quarto scrollytelling repo), not by this export. Links into them are real,
+// but their targets can never exist in `out/`.
+const SIBLING_SITE_PREFIXES = ['/scrollytelling/'];
+const isSiblingSitePath = (pathname) =>
+  SIBLING_SITE_PREFIXES.some((prefix) => pathname.startsWith(prefix));
+
 function walk(dir, match) {
   const found = [];
   if (!existsSync(dir)) return found;
@@ -252,6 +259,8 @@ function validateInternalTarget(raw, source, label) {
       `${label} exposes a draft route: ${url.pathname}`,
     );
   }
+
+  if (isSiblingSitePath(url.pathname)) return;
 
   const targetPage = pageAt(url.pathname);
   const targetExists = targetPage || exportedFileExists(url.pathname);
@@ -518,7 +527,11 @@ function validateXmlUrl(raw, documentName, options = {}) {
         `URL is not in canonical trailing-slash form: ${raw.trim()}`,
       );
     }
-    if (!pageAt(url.pathname) && !exportedFileExists(url.pathname)) {
+    if (
+      !isSiblingSitePath(url.pathname) &&
+      !pageAt(url.pathname) &&
+      !exportedFileExists(url.pathname)
+    ) {
       fail(documentName, `URL points at missing export: ${url.pathname}`);
     }
   }
