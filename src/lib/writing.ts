@@ -13,6 +13,16 @@ export interface WritingItem {
   pinned: boolean;
   /** Whether an external-styled item opens in a new tab. PDFs open in place. */
   newTab: boolean;
+  /**
+   * Lives on this domain but outside the Next app (e.g. a Quarto project
+   * site), so it needs a full page load rather than a client-side `<Link>`.
+   */
+  standalone: boolean;
+}
+
+/** A site-relative path served by a separate Pages site on this domain. */
+function isStandalone(url: string): boolean {
+  return url.startsWith('/');
 }
 
 /** Newest-first order; undated guides sort by title at the end. */
@@ -50,14 +60,20 @@ export function getWritingItems(): WritingItem[] {
     source: 'On this site',
     pinned: Boolean(post.pinned),
     newTab: false,
+    standalone: false,
   }));
-  const external: WritingItem[] = externalWriting.map((item) => ({
-    ...item,
-    isExternal: true,
-    source: externalSource(item.url),
-    pinned: Boolean(item.pinned),
-    newTab: true,
-  }));
+  const external: WritingItem[] = externalWriting.map((item) => {
+    const standalone = isStandalone(item.url);
+
+    return {
+      ...item,
+      isExternal: !standalone,
+      source: standalone ? 'On this site' : externalSource(item.url),
+      pinned: Boolean(item.pinned),
+      newTab: !standalone,
+      standalone,
+    };
+  });
 
   return [...internal, ...external].sort(compareWritingItems);
 }
@@ -71,6 +87,7 @@ export function getPresentationItems(): WritingItem[] {
       source: 'PDF',
       pinned: Boolean(item.pinned),
       newTab: false,
+      standalone: false,
     }))
     .sort(compareWritingItems);
 }

@@ -41,7 +41,9 @@ export async function GET() {
     .filter((item) => item.date)
     .map((item) => ({
       title: item.title,
-      url: item.url,
+      // Site-relative entries (separate Pages sites on this domain) still
+      // need an absolute link in RSS.
+      url: new URL(item.url, SITE_URL).href,
       date: item.date,
       description: item.description,
     }));

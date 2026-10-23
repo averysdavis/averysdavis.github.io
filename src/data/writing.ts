@@ -7,6 +7,14 @@ export interface WritingItem {
   pinned?: boolean;
 }
 
-const data: WritingItem[] = [];
+const data: WritingItem[] = [
+  {
+    title: 'Closeread Feature Tour',
+    url: '/scrollytelling/closeread-tour/',
+    date: '2026-10-23',
+    description:
+      "A walkthrough of Closeread's layouts, highlighting, zoom and scroll effects.",
+  },
+];
 
 export default data;

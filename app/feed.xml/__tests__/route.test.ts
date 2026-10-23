@@ -26,7 +26,16 @@ describe('feed.xml route', () => {
     const xml = await response.text();
 
     expect(xml).toContain(
-      '<lastBuildDate>Mon, 07 Sep 2026 12:00:00 GMT</lastBuildDate>',
+      '<lastBuildDate>Fri, 23 Oct 2026 12:00:00 GMT</lastBuildDate>',
+    );
+  });
+
+  it('resolves site-relative writing links to absolute URLs', async () => {
+    const response = await GET();
+    const xml = await response.text();
+
+    expect(xml).toContain(
+      `<link>${SITE_URL}/scrollytelling/closeread-tour/</link>`,
     );
   });
 });

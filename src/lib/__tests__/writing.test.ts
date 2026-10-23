@@ -31,6 +31,22 @@ describe('getWritingItems', () => {
     );
   });
 
+  it('treats site-relative entries as on-site pages outside the Next app', () => {
+    const standalone = getWritingItems().filter((item) =>
+      item.url.startsWith('/scrollytelling/'),
+    );
+
+    expect(standalone.length).toBeGreaterThan(0);
+    for (const item of standalone) {
+      expect(item).toMatchObject({
+        isExternal: false,
+        source: 'On this site',
+        newTab: false,
+        standalone: true,
+      });
+    }
+  });
+
   it('orders equal and undated entries deterministically', () => {
     const item = (
       title: string,
@@ -46,6 +62,7 @@ describe('getWritingItems', () => {
       source: 'Example',
       pinned,
       newTab: true,
+      standalone: false,
     });
 
     expect(

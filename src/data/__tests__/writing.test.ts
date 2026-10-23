@@ -34,7 +34,8 @@ describe('writing data', () => {
   });
 
   it('urls are valid', () => {
-    const urlRegex = /^https?:\/\/.+/;
+    // Absolute, or a canonical trailing-slash path on this domain.
+    const urlRegex = /^(https?:\/\/.+|\/.+\/)$/;
 
     for (const item of writing) {
       expect(item.url).toMatch(urlRegex);

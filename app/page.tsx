@@ -60,7 +60,7 @@ export default function HomePage() {
               </>
             );
 
-            return item.isExternal ? (
+            return item.isExternal || item.standalone ? (
               <a
                 key={item.url}
                 href={item.url}

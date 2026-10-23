@@ -76,7 +76,7 @@ function WritingItem({ item, showDate = true }: WritingItemProps) {
     </>
   );
 
-  if (item.isExternal) {
+  if (item.isExternal || item.standalone) {
     return (
       <a
         href={item.url}
