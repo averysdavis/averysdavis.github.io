@@ -7,6 +7,15 @@ export interface WritingItem {
   pinned?: boolean;
 }
 
-const data: WritingItem[] = [];
+const data: WritingItem[] = [
+  {
+    title: '繁星 (Fánxīng)',
+    url: '/scrollytelling/stars/',
+    date: '2026-10-29',
+    description:
+      'Understanding and analyzing the 20th century poem by Bing Xin about a myriad of stars.',
+    pinned: true,
+  },
+];
 
 export default data;
