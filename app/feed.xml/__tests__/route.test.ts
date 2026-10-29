@@ -1,8 +1,21 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { SITE_URL } from '@/lib/utils';
 
 import { GET } from '../route';
+
+// A site-relative entry (a scrollytelling story on a sibling Pages site).
+// Dated before every post so it does not move lastBuildDate.
+vi.mock('@/data/writing', () => ({
+  default: [
+    {
+      title: 'Example Story',
+      url: '/scrollytelling/example/',
+      date: '2026-01-01',
+      description: 'A scrollytelling fixture.',
+    },
+  ],
+}));
 
 describe('feed.xml route', () => {
   it('uses canonical trailing-slash links for writing pages', async () => {
@@ -26,7 +39,7 @@ describe('feed.xml route', () => {
     const xml = await response.text();
 
     expect(xml).toContain(
-      '<lastBuildDate>Fri, 23 Oct 2026 12:00:00 GMT</lastBuildDate>',
+      '<lastBuildDate>Mon, 07 Sep 2026 12:00:00 GMT</lastBuildDate>',
     );
   });
 
@@ -34,8 +47,6 @@ describe('feed.xml route', () => {
     const response = await GET();
     const xml = await response.text();
 
-    expect(xml).toContain(
-      `<link>${SITE_URL}/scrollytelling/closeread-tour/</link>`,
-    );
+    expect(xml).toContain(`<link>${SITE_URL}/scrollytelling/example/</link>`);
   });
 });

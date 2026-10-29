@@ -9,11 +9,12 @@ export interface WritingItem {
 
 const data: WritingItem[] = [
   {
-    title: 'Closeread Feature Tour',
-    url: '/scrollytelling/closeread-tour/',
-    date: '2026-10-23',
+    title: '繁星 (Fánxīng)',
+    url: '/scrollytelling/stars/',
+    date: '2026-10-29',
     description:
-      "A walkthrough of Closeread's layouts, highlighting, zoom and scroll effects.",
+      'Understanding and analyzing the 20th century poem by Bing Xin about a myriad of stars.',
+    pinned: true,
   },
 ];
 

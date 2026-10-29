@@ -1,10 +1,23 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import {
   compareWritingItems,
   getWritingItems,
   type WritingItem,
 } from '../writing';
+
+// A site-relative entry (a scrollytelling story on a sibling Pages site),
+// so the standalone path is covered whether or not one is listed for real.
+vi.mock('@/data/writing', () => ({
+  default: [
+    {
+      title: 'Example Story',
+      url: '/scrollytelling/example/',
+      date: '2026-01-01',
+      description: 'A scrollytelling fixture.',
+    },
+  ],
+}));
 
 describe('getWritingItems', () => {
   it('merges published local posts and external writing newest first', () => {
