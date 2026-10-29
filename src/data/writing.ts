@@ -13,7 +13,7 @@ const data: WritingItem[] = [
     url: '/scrollytelling/stars/',
     date: '2026-10-29',
     description:
-      'Understanding and analyzing the 20th century poem by Bing Xin about a myriad of stars.',
+      "Understanding and analyzing the 20th century poem by Bing Xin about a myriad of stars. Look at three different translations (including my own) to see what Bing Xin's vernacular Chinese says that English can't.",
     pinned: true,
   },
 ];
